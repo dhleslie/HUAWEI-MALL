@@ -1,0 +1,518 @@
+#content{
+	background-color: #F5F5F5;
+}
+
+
+.c-banner{
+    /*.c-banner样式：相对定位（相对定位后，可以作为子元素绝对定位的参照对象）和高度 */
+    position: relative;
+    height: 450px;
+}
+.c-banner .c-b-con li{
+    /*每一个li包含一张图片，所有图片的显示位置相同，因此不能采用默认定位，这里采用绝对定位重新定位*/
+    position:absolute;  /*用绝对定位+负外边距的方式实现在父元素中居中*/
+    left:50%;
+    margin-left:-960px;
+
+}
+.c-banner .c-b-btn{  
+    /*设置.c-b-btn样式：用绝对定位+负外边距重新定位到c-banner的水平居中*/
+    position: absolute;
+    left:50%;
+    width:180px;
+    margin-left:-90px;
+    bottom:26px;
+}
+.c-banner .c-b-btn li{ 
+    /*设置.c-b-btn中每一个圆点的样式:宽度、高度、右外边距、边框、圆角边框*/
+    width: 10px;
+    height: 10px;
+    margin-right:8px;
+    border:1px solid #fff;
+    border-radius:50%;
+}
+.c-banner .c-b-btn li.first{   /*设置.c-b-btn中.first类的圆点样式:白色背景*/
+    background-color: #fff;
+}
+
+   
+.c-banner .c-menu{ 
+    /*设置.c-menu的样式：通过此绝对定位+负外边距的方式实现定位*/
+    position: absolute;
+    left:50%;
+    top:0;
+    width: 240px;
+    margin-left:-600px;	
+}
+.c-banner .c-m-con{ 
+    /*设置.c-m-con定位方式为相对定位，使其作为子元素c-submenu二级菜单绝对定位的参照对象，之所以选择.c-m-con为参照对象，是因为所有c-submenu二级菜单的最终位置都相同。而如果选择li作为参照对象，因为每一个li的位置都不同，会导致每一个c-submenu在不同的位置*/
+    position:relative;
+}
+.c-banner .c-m-con > li{  /*设置.c-m-con的每个菜单项的样式*/
+    height: 65px;    /*设置高度*/
+    padding:10px 0 0 15px;  /*设置内边距*/
+    background-color:rgba(0,0,0,0.6);  /*设置黑色背景，且有一定的透明度*/
+    font-size:14px;   /*设置文字大小*/
+}
+.c-banner .c-m-con > li > p{  /*设置每个菜单项中p的样式：相对定位、下外边距*/
+    position:relative;
+    margin-bottom:5px;
+}
+.c-banner .c-m-con > li > p > a{ /*设置每个菜单项中p所包含的超链接样式*/
+    margin-right:10px;
+}
+.c-banner .c-m-con > li:hover{  /*设置每个菜单项鼠标悬停时的样式*/
+    background-color:#3D3D3D;
+}
+.c-banner .c-m-con > li:hover > p > a{  /*设置当鼠标悬停时，每个菜单项中p所包含的超链接样式*/
+    color:#fff;	
+}
+.c-banner .c-m-con > li i{/*设置每个菜单项中所包含的i标签样式*/
+    position: absolute;  /*绝对定位，此处i将以其父元素p为参照对象进行定位*/
+    right:10px;        /*水平坐标：右边线在p右边线之左10px */   
+    bottom:-5px;      /*垂直坐标：下边线在p下边线之下5px */
+    width: 7px;       /*设置宽度 */
+    height: 13px;      /*设置高度 */
+    background: url('images/content/01 login and icon/icon-common.png') no-repeat -9px -214px;     /*设置背景图片：从指定图片中截取一部分 */
+}
+
+
+/*.c-submenu样式：正常情况隐藏，绝对定位（参照对象为.c-m-con），垂直方向与.c-m-con 对其，水平方向刚好在.c-m-con 的右侧*/
+.c-banner .c-submenu{
+	display:none;
+	position:absolute;
+	top:0;
+	left:240px;
+	width:650px;
+	height:450px;
+	border:1px solid #CCC;
+	background-color:#FFF;
+}
+.c-banner .c-m-con > li:hover .c-submenu{
+/*当鼠标悬停到.c-m-con的菜单项时，子菜单显示*/
+	display:block;
+}
+.c-banner .c-submenu .sub-floor1{
+/*子菜单.c-submenu的第一部分.sub-floor1样式：高度、右内边距、行高、下边框*/
+	height: 70px;
+	padding-right:30px;
+	line-height:70px;
+	border-bottom:1px solid rgb(234,234,234);
+}
+.c-submenu .sub-floor1 a{
+/*子菜单.c-submenu的第一部分.sub-floor1中的超链接样式：左外边距，文字颜色*/
+	margin-left:40px;
+	color:#CA151D;
+}
+.c-submenu .sub-floor2{
+/*子菜单.c-submenu的第一部分.sub-floor2样式：高度、内边距、下边框、行高*/
+	height: 100px;
+	padding:20px 40px;
+	border-bottom:1px solid rgb(234,234,234);
+	line-height:50px;
+}
+.c-submenu .sub-floor2 a {
+/*子菜单.c-submenu的第二部分.sub-floor2中的超链接样式：右外边距，文字颜色*/
+    margin-right: 25px;
+    color: #000;
+}
+.c-submenu .sub-floor3 li{
+/*子菜单.c-submenu的第三部分.sub-floor3中的li样式：相对定位、宽度、高度、上内边距、背景颜色、水平居中对齐、过渡*/
+	position:relative;
+	top:0;
+	width: 161px;
+	height: 210px;
+	padding-top:26px;
+	background-color: #fff;
+	text-align:center;
+	transition:top .3s;  /*当top属性值变化时，用动画0.3秒演示变换过程*/
+}
+.c-submenu .sub-floor3 li + li{ 
+ /*在子菜单.c-submenu的第三部分.sub-floor3中，从第二个li开始，设置每个li的左边框*/
+	border-left:1px solid rgb(234,234,234);	
+}
+.c-submenu .sub-floor3 img{
+/*在子菜单.c-submenu的第三部分.sub-floor3中，设置所有图片的样式：宽度、高度、垂直对齐 */
+	width: 118px;
+	height: 118px;	
+	vertical-align:top;
+}
+.c-submenu .sub-floor3 p{
+/*设置子菜单.c-submenu的第三部分.sub-floor3中的p标签样式：宽度与父元素相等*/
+	width: 118px;
+	margin:auto;
+}
+.c-submenu .sub-floor3 .pro-name{
+/*设置.sub-floor3中.pro-name类的样式：显示为单元格、高度、垂直对齐、行高、文字颜色*/
+	display:table-cell;
+	height: 46px;
+	vertical-align:bottom;
+	line-height:1.1;
+	color:#000;
+}
+.c-submenu .sub-floor3 .pro-price{
+/*设置.sub-floor3中.pro-price类的样式：文字颜色*/
+	color:#CA151D;
+}
+.c-submenu .sub-floor3 li:hover{
+/*设置.sub-floor3中，所有li鼠标悬停时的样式：垂直坐标从0变为-2px，边框阴影*/
+	top:-2px;
+	box-shadow:0px 5px 10px 0 rgba(0,0,0,0.15);
+}
+
+
+.c-nav{  /*设置content部分.c-nav块的样式：高度、背景色、边框、去上边框、下外边距、字体大小*/
+	height: 98px;
+	background-color: #fff;
+	border:1px solid #eee;
+	border-top:0;
+	margin-bottom:12px;
+	font-size: 12px;	
+}
+.c-nav .c-n-login{  /*.c-n-login 小块的样式：外边距、右边框、右内边距*/
+	margin:12px 0 12px 23px;
+	border-right:1px solid #eee;
+	padding-right:25px;
+}
+.c-nav .c-n-login img{ /*设置.c-n-login 小块的img样式:宽度、高度、上外边距、右外边距*/
+	width: 59px;
+	height: 59px;
+	margin-top:8px;
+	margin-right:20px;
+}
+.c-nav .c-n-login .c-l-con{ 
+ /*设置.c-n-login 小块中右边小块.c-l-con样式:宽度、高度、上外边距、文字颜色*/
+	width: 160px;
+	height:60px;
+	margin-top:8px;
+	color:#B6B6B6;
+}
+.c-nav .c-n-login .c-l-con p a{/*设置.c-n-login 小块中右边小块.c-l-con中p里的超链接样式:文字颜色、下划线*/
+	color:#000;
+	text-decoration:underline;
+}
+.c-nav .c-n-login .c-l-con p a:hover{/*设置.c-n-login 小块中右边小块.c-l-con中p里的悬停状态的超链接样式:文字颜色*/
+	color:#CA151D;
+}
+.c-nav .c-n-login .c-l-con > a{/*设置小块.c-l-con中直接包含的超链接样式*/
+	display: inline-block;   /*行内块*/
+	width: 58px;          /*设置宽度*/
+	height: 18px;          /*设置高度*/
+	margin-top:8px;        /*设置上外边距*/
+	margin-right:8px;       /*设置右外边距*/
+	border:1px solid #CA151D;  /*设置边框*/
+	color:#CA151D;           /*设置文字颜色*/
+	line-height:18px;           /*设置行高*/
+	text-align:center;           /*设置水平居中对齐*/
+}
+.c-nav .c-n-login .c-l-con > a:hover{  
+/*设置小块.c-l-con中直接包含的悬停状态的超链接样式：背景色、文字颜色*/
+	background-color: #CA151D;
+	color:#fff;
+}
+.c-nav .c-select li{  /*设置小块.c-select中li样式：宽度、上外边距、水平居中对齐*/
+	width:101px;
+	margin-top:20px;
+	text-align:center;	
+}
+.c-nav .c-select li a{  /*设置小块.c-select中li包含的超链接样式：文字颜色 */
+	color:#000;
+}
+.c-nav .c-select li a:hover{  /*设置小块.c-select中li包含的悬停状态的超链接样式*/
+	color:#CA151D;
+}
+.c-nav .c-select li i{
+/*设置小块.c-select中li包含的i标签样式:块元素、宽度。高度、自动外边距。背景图片*/
+	display:block;
+	width:40px;
+	height:40px;
+	margin:auto;
+	background:url("images/content/01 login and icon/01.png")
+}
+.c-nav .c-select li i.second{ /*设置小块.c-select中li包含的.second类的i标签样式*/
+	background-position:-40px 0;
+}
+.c-nav .c-select li i.third{  /*设置小块.c-select中li包含的.third类的i标签样式*/
+	background-position:-80px 0;
+}
+.c-nav .c-select li i.fourth{  /*设置小块.c-select中li包含的.fourth类的i标签样式*/
+	background-position:-120px 0;
+}
+.c-nav .c-select li i.fifth{  /*设置小块.c-select中li包含的.fifth类的i标签样式*/
+	background-position:-160px 0;
+}
+.c-nav .c-select li i.sixth{  /*设置小块.c-select中li包含的.sixth类的i标签样式*/
+	background-position:-200px 0;
+}
+.c-nav .c-notice{  /*设置小块.c-notice样式:宽度、左边框*/
+	width:303px;
+	border-left:1px solid #eee;
+}
+.c-nav .c-notice a{ /*设置小块.c-notice中.c-n-txt类的p中的超链接样式*/
+	color:#000;
+}
+.c-nav .c-notice a:hover{ 
+/*设置小块.c-notice中.c-n-txt类的p中的悬停状态的超链接样式*/
+	color:#CA151D;
+}
+.c-nav .c-notice p.c-n-txt{ 
+/*设置小块.c-notice中.c-n-txt类的p样式:高度、行高、下边框和字体大小*/
+	height:49px;
+	line-height:49px;
+	border-bottom:1px solid #eee;
+	font-size:14px;	
+}
+.c-nav .c-notice p.c-n-txt i{ 
+/*设置小块.c-notice中.c-n-txt类的p中的实现图标显示的i标签样式*/
+	display: inline-block;  /*行内块*/
+	width: 31px;         /*设置宽度*/
+	height: 13px;         /*设置高度*/
+	margin:0 12px;       /*设置外边距*/
+	background:url('images/content/01 login and icon/icon-common.png') no-repeat -17px -214px;  /*设置背景图片*/
+	vertical-align:middle; /*设置垂直居中对齐*/
+}
+.c-nav .c-notice p.c-n-info{  /*设置小块.c-notice中.c-n-info类的p的样式:高度、行高*/
+	height:48px;
+	line-height:48px;	
+}
+.c-nav .c-notice p.c-n-info a{ /*设置小块.c-notice中.c-n-info类的p中的超链接样式*/
+	display:block;   /*块级元素*/
+	width:101px;    /*设置宽度*/
+	text-align:center; /*水平居中对齐 */
+}
+.c-nav .c-notice p.c-n-info span{ /*设置小块.c-notice中.c-n-info类的p中span标签样式*/
+	display:inline-block;    /*行内块*/
+	width:20px;           /*宽度*/
+	height:20px;           /*高度*/
+	background:url('images/content/01 login and icon/kind-1.png') no-repeat -242px 0px;
+ /*背景图片*/
+	vertical-align:middle;  /*垂直居中对齐*/
+}
+.c-nav .c-notice .c-n-info a span.second{
+	background-position: -262px 0px;
+}
+.c-nav .c-notice .c-n-info a span.third{
+	background-position: -282px 0px;
+}
+
+
+.c-promo{ /*.c-promo样式：下外边距控制与后续块之间的距离*/
+	margin-bottom:10px;
+}
+.c-promo li+li{   /*设置.c-promo块中除了第一个li的所有li样式：下外边距控制与后续块之间的距离*/
+	margin-left:12px;
+}
+.c-promo li{ /*设置.c-promo块中所有li样式：过渡 */
+	transition:box-shadow 0.2s;
+}
+.c-promo li:hover{  /*设置.c-promo块中鼠标悬停状态时的li样式*/
+	box-shadow:0px 15px 30px 0 rgba(0,0,0,0.1);
+}
+
+
+.special .goods-title{  /*定义通用展示块样式.special的商品标题样式.goods-title */
+	padding:20px 0 15px 0;
+}
+.special h2{   
+/*定义.special中的h2标签样式：右外边距、字体大小、字体稍细、行高*/
+	margin-right:32px;
+	font-size: 22px;
+	font-weight:normal;
+	line-height:1;
+}
+.special .goods-con li{  /*定义商品列表中每一项商品信息li的样式：相对定位、垂直位置不偏移、背景色、水平居中、过渡效果*/
+	position:relative;
+	top:0;
+	background-color: #fff;
+	text-align:center;
+	transition:top 0.3s;
+}
+.special .goods-con li a{ 
+/*定义商品列表中每一项商品信息li的超链接样式：块元素、宽度、高度*/
+	display:block;
+	width:100%;
+	height:100%;	
+}
+.special .goods-con li:hover{
+/*定义商品列表中每一项商品信息li中的鼠标悬停状态的超链接样式：垂直位置向上偏移2px、边框阴影*/
+	top:-2px;
+	box-shadow:0px 10px 15px rgba(0,0,0,0.07);
+}
+.special .goods-con p{ /*定义商品列表中p标签样式：行高*/
+	line-height:24px;
+}
+.special .goods-con p.pro-name{ /*定义商品列表中.pro-name 类的p标签样式：上外边距、字体大小、文字颜色*/
+	margin-top:22px;
+	font-size: 14px;
+	color:#000;
+}
+.special .goods-con p.pro-desc{
+ /*定义商品列表中.pro-desc类的p标签样式：字体大小、文字颜色*/
+	font-size: 12px;
+	color:#B6B6B6;
+}
+.special .goods-con p.pro-price{
+/*定义商品列表中.pro- price类的p标签样式：字体大小、文字颜色*/
+	font-size: 14px;
+	color:#CA151D;
+}
+
+
+.hots-goods .goods-con li + li{
+	width: 232px;
+	height:290px;
+	margin-left:10px;
+	margin-bottom:10px;
+}
+.hots-goods .goods-con li + li img{
+	width: 148px;
+	height: 148px;
+	margin-top:28px;
+}
+.special .goods-con li.new:after{
+	position: absolute;
+	content:'';
+	width: 48px;
+	height: 48px;
+	background:url('images/content/01 login and icon/1497576023361.png') no-repeat 0px 0px;
+}
+.hots-goods .goods-con li.new:after{
+	right: 35px;
+    top: 135px;
+}
+
+
+.special1 .goods-con{
+    /*设置商品信息块.goods-con样式：相对定位，水平方向超出部分截断*/
+    position: relative;
+    overflow-x:hidden;
+}
+.special1 .goods-con ul{/*设置商品信息块.goods-con中商品信息列表的样式*/
+    width: 1400px;   /*宽度1400px,超出其父元素的宽度，超出部分将被截断*/
+}
+.special1 .goods-con li{  /*设置.goods-con中商品信息列表中每一列表项li的样式*/
+    width: 215px;     /*设置宽度*/
+    padding-top:40px;  /*设置上内边距*/
+    padding-bottom:22px; /*设置下内边距*/
+    margin-bottom:15px;  /*设置下外边距*/
+    margin-top:2px;      /*设置上外边距*/
+    }
+.special1 .goods-con li + li{  /*设置除了第一个li外，其余li样式：左边框*/
+    border-left:1px solid #eee;
+}
+.special1 .goods-con li img{  /*设置每个li中的img的样式：宽度、高度*/
+    width: 134px;
+    height: 134px;
+}
+.special1 .goods-con > div{ 
+    /*设置商品信息块.goods-con中的div(此处即为展示块中左右两端的按钮)样式*/
+    position: absolute;  /*通过绝对定位+负垂直方向外边距的方法实现垂直居中，水平方向与父元素.goods-con左对齐*/
+    top:50%;
+    left:0;
+    margin-top:-37.5px;
+    width: 22px;    
+    height: 75px;
+    background-color:rgba(204,204,204,0.9);
+}
+.special1 .goods-con > div:hover{  
+    /*设置商品信息块.goods-con中的悬停状态的div(此处即为展示块中左右两端的按钮)样式*/
+    background-color:rgba(110,110,110,0.5);
+}
+.special1 .goods-con > div a{ /*设置商品信息块.goods-con中的div(此处即为展示块中左右两端的按钮)内的超链接样式：块元素、宽度和高度，即实现占满父元素*/
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.special1 .goods-con > div i{/*设置商品信息块.goods-con中的div(此处即为展示块中左右两端的按钮)内的i标签样式：块元素、宽度和高度，自动外边距，上外边距，背景图片*/
+    display: block;
+    width: 11px;
+    height: 16px;
+    margin:0 auto;
+    margin-top:27.5px;
+    background:url('images/content/01 login and icon/icon-common.png') no-repeat -101px -1px;
+}
+    
+.special1 .goods-con > div.right-btn{ 
+    /*设置商品信息块.goods-con中的.right-btn类div(此处即为展示块中左右两端的按钮)样式：水平坐标 */
+    right:0px;
+}
+.special1 .goods-con > div.right-btn i{ 
+    /*设置商品信息块.goods-con中的.right-btn类div(此处即为展示块中左右两端的按钮)中i标签样式：背景图片位置*/
+    background-position: -112px -1px;
+}
+  
+
+.special2 .goods-con li + li{
+    /*从第二个商品信息开始，设置宽度、高度、左外边距、下外边距*/
+    width: 291px;
+    height: 346px;
+    margin-left:12px;
+    margin-bottom:12px;
+}
+.special2 .goods-con li + li img{ 
+    /*从第二个商品信息开始，设置其中的img样式：宽度、高度、上外边距*/
+    width: 178px;
+    height: 178px;
+    margin-top:38px;
+}
+.special2 .goods-con li.first img{/*设置.first类的li中的img样式：宽度、高度*/
+    width: 291px;
+    height: 346px;
+}
+.special2 .goods-con .no-m{  /*.no-m 样式：左外边距为0*/
+    margin-left:0;
+}
+ 
+
+.special .goods-title a{
+	margin-right:20px;
+	padding-bottom: 5px;
+}
+.special .goods-title li a:hover{
+	border-bottom: 2px solid #CA151D;
+}
+.special .goods-title .g-more{
+	margin-right:15px;
+	font-size: 18px;
+    color:#000;
+}
+.special .goods-title a.g-more:hover{
+	color:#CA151D;
+}
+
+
+.special3 .goods-con li.first img{ 
+    /*设置.special3中第一个商品信息块中img样式：宽度、高度*/
+    width:594px;
+    height:346px;
+}
+
+
+.c-banner2{ /*.c-banner2 块样式：相对定位、高度、外边距自动*/
+	position: relative;
+	height: 120px;
+	margin:10px auto;
+}
+.c-banner2 .c-b2-con li{ /*设置图片列表中每个li样式：绝对定位，没有指定坐标默认就是在父元素.c-banner的左上角*/
+	position: absolute;
+    left: 50%;
+	margin-left: -600px;
+	top: 0;
+}
+.c-banner2 .c-b2-btn{ /*手工轮播控制块.c-b2-btn样式：绝对定位，水平方向位置右边线在父元素.c-banner右边线的左边110px，垂直方向下边线在父元素下边线之上10px*/
+	position: absolute;
+	right:110px;
+	bottom:10px;
+}
+.c-banner2 .c-b2-btn li{ /*手工轮播控制块.c-b2-btn中的li样式：宽度、高度、右外边距、圆角边框、背景色*/
+	width: 10px;
+	height: 10px;
+	margin-right:5px;
+	border-radius:50%;
+	background-color:rgba(204,204,204,0.9);
+}
+.c-banner2.c-b2-btn li.first{  /*手工轮播控制块.c-b2-btn中.first类的li样式：背景色*/
+	background-color:rgba(255,0,0,0.2);
+}
+
+ 

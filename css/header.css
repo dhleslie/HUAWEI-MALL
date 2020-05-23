@@ -1,0 +1,201 @@
+#header .h-new{ /*通过后代选择器限定各个选择器的作用范围*/
+	position:relative; /*设置相对定位，使其作为子元素h-close关闭按钮定位的参照对象*/
+}
+#header .h-new .h-n-con img{ /*设置h-new中的图片采用相对定位+负外边距的方式居中*/
+	position:relative;
+	left:50%;
+	margin-left:-960px;
+}
+#header .h-new .h-close{
+	position: absolute;  /*绝对定位，参照对象为h-new*/
+	top:10px;         /*垂直方向位于h-new顶边向下10px的位置*/
+    left:50%;          /*水平方向位于h-new中间再加上560px的位置*/
+	margin-left:570px;	          
+	width: 24px;   /*设置关闭按钮宽度*/
+	height: 24px;   /*设置关闭按钮高度*/
+	background: url(../images/header/icon1.png) no-repeat 0px -385px;
+    /*设置背景图片，从指定图片文件中获取需要的一部分图片*/
+}
+
+
+#header .h-nav{
+	font-size:12px;  /*设置文字大小*/
+}
+#header .h-nav ul > li{
+	position: relative;   /*设置li为“已经定位”（相对定位），使其作为子元素:before元素（还有后面的.more-con下拉菜单）定位的参照对象*/
+	padding-right:8px;   /*设置导航条中每个菜单项的右内边距，用于控制菜单项之间的距离*/
+}
+#header .h-nav ul > li + li{
+	padding-left:8px;  /*设置导航条中从第二个菜单项开始的其余菜单项的左内边距，用于控制菜单项之间的距离*/
+}
+#header .h-nav ul > li > a{
+	line-height:30px;  /*设置菜单项中超链接的行高*/
+}
+#header .h-nav ul > li+li::before{/*给导航条中从第二个菜单项开始的其余菜单项，在每个菜单项之前插入内容： 一个宽度为1px、高度为10px，背景色为#666的线（其作用是作为菜单项之间的分隔线）*/
+	position:absolute;  /*该插入内容相对于菜单项进行绝对定位*/
+	top:10px;
+	left:0px;
+	content:'';
+	width: 1px;
+	height: 10px;
+	background-color: #999;
+}
+#header .h-nav .h-n-r li.no-bor{  /*设置左内边距为3px*/
+	padding-left:3px;
+}
+#header .h-nav .h-n-r li.no-bor:before{   /*设置“请登录”和“注册”这两个菜单项之间的分隔线为隐藏*/
+	display: none;
+}
+
+
+#header .h-nav ul > li.more{  /*设置.more菜单项右内边距20px，比其他的菜单项增加12px，用于显示该菜单项后面的下拉箭头*/
+	padding-right:20px;
+}
+#header .h-nav ul > li.more:hover{  /*设置.more菜单项鼠标悬停时的效果：白色背景、增加边框阴影*/
+	background-color: #fff;
+	box-shadow:0px 5px 0 0 #fff,2px 0 5px 0 #ccc,-2px 0 5px 0 #ccc;
+}
+/*设置.more菜单项鼠标悬停时在菜单项前插入的分隔线位置向左偏移1px，这样就使得该分隔线被其他菜单项所覆盖*/
+#header .h-nav ul > li.more:hover::before{
+	left:-1px;
+}
+/*利用::after伪元素给.more菜单项的后面插入一个倒三角形，具体参考上文4.8.4*/
+#header .h-nav ul > li.more::after{
+	position: absolute;
+	top:11px;
+	right:5px;
+	content:'';
+	border:4px solid transparent;
+	border-top:6px solid #999;
+}
+#header .h-nav ul > li.more:hover::after{  /*设置.more菜单项鼠标悬停状态的时候，插入到菜单项后面的图标变为正三角形*/
+	border-top:0;
+	border-bottom:6px solid #999;
+}
+#header .h-nav .h-n-l .more-con{ /*设置下拉菜单样式 */
+	display:none;  /*正常状态隐藏下拉菜单*/
+position: absolute;   /*设置绝对定位*/  
+	top:30px;          /*设置垂直方向坐标：参照对象以“更多精彩”菜单项为最方便，因为该菜单项的定位方式必须为已经定位的*/
+	right:0;       /*设置水平方向坐标：与“更多精彩”菜单项右对齐*/
+	z-index:-1;    /*当该下拉菜单显示的时候，会与h-nav重叠，重叠时该下拉菜单在.h-nav块的后面，因为.more-con的z-index值小于h-nav块的z-index值1。所以也需要设置.h-nav块的z-index值*/	
+	width: 145px;  /*设置宽度*/
+	padding:10px;  /*设置内边距*/
+	background-color: #fff;  /*设置背景颜色白色，与“更多精彩”菜单项的背景色一致，视觉上会产生整体的效果/
+	text-align: center;   /*设置水平对齐为居中*/
+	line-height:32px;   /*设置行高*/
+	box-shadow:0px 0px 5px 1px #ccc;   /*设置边框阴影*/
+}
+/*修改.h-nav的样式：增加z-index值的设置，同时需要设置position为relative或者absolute，这个z-index属性值才能生效*/
+#header .h-nav{
+	position: relative;
+	z-index:1;
+	font-size:12px;
+}
+#header .h-nav ul > li.more:hover .more-con{  /*设置“更多精彩”菜单项悬停状态时的下拉菜单的样式：显示该下拉菜单*/
+	display:block;
+}
+
+
+
+#header .h-nav .h-n-r li.car{  /*定义.car样式：白色背景，右内边距为20px*/
+	padding-right:20px;
+}
+#header .h-nav .h-n-r li.car:hover{ /*.car鼠标悬停时样式：增加边框阴影*/
+    background-color:#fff;
+	box-shadow:0px 5px 0 0 #fff,2px 0 5px 0 #ccc,-2px 0 5px 0 #ccc;
+}
+#header .h-nav .h-n-r li.car:hover::before{/*隐藏.car左边的菜单项之间的分隔线*/
+	left:-1px;
+}
+.h-nav li.car a{ /*定义.car中的超链接样式：相对定位和左内边距*/
+	position: relative;
+	padding-left: 28px;
+}
+.h-nav li.car a::after{/*为购物车超链接之前添加一个购物车图标*/
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	background: url(../images/header/icon-header.png) no-repeat 0px 0px;
+}
+.h-nav .h-n-r li.car .car-con{  /*定义购物车下拉菜单.c-con样式*/
+	display: none;
+	position: absolute;
+	top:30px;
+	right:0;
+	z-index:-1;
+	width: 460px;
+	height:180px;
+	padding-top:50px;
+	background-color: #fff;
+	text-align: center;
+	box-shadow:0px 0px 5px 1px #ccc;
+}
+.h-nav .h-n-r li.car:hover .car-con{
+	display: block;
+}
+
+
+
+.h-content{  /*.h-content块上下内边距为10px*/
+	padding:10px 0;
+}
+.h-content .h-c-nav{  /*.h-content块中间部分.h-c-nav导航条左外边距为40px*/
+	margin-left:40px;
+}
+.h-content .h-c-nav li{ 
+/*.h-c-nav导航条的每个菜单项的右外边距为20px，用于控制菜单项之间的距离*/
+	margin-right:20px;
+}
+.h-content .h-c-nav li a{	 /*设置.h-c-nav导航条的每个菜单项中超链接a的样式*/
+	padding-bottom:8px;  /*设置下内边距为8px*/
+	color:#000;          /*设置文字颜色*/
+	font-size:16px;       /*设置文字大小*/
+	line-height:50px;      /*设置行高*/
+}
+.h-content .h-c-nav li a:hover{
+ /*设置.h-c-nav导航条的每个菜单项中超链接a的鼠标悬停状态的样式：改变文字颜色，增加下边框*/
+	color:#CA151D;
+	border-bottom:2px solid #CA151D;
+}
+/*右边搜索表单.search的样式*/
+.h-content .search{
+	position: relative;  /*相对定位，用于作为子元素绝对定位时的参照对象*/
+	width: 330px;     /*设置宽度*/
+	margin: 10px;
+	height: 30px;
+	border:1px solid #DDD;
+}
+.h-content .search .search-bar{   /*设置搜索表单中文本框.search-bar的样式*/
+	position: absolute;
+width: 300px;     /*设置宽度*/
+height: 30px;
+	border:0;         /*设置无边框*/
+	outline:none;      /*设置无轮廓*/
+}
+.h-content .search .search-bar:focus+p{  /*设置当表单中的文本框.search-bar获得焦点时，紧跟文本框之后的段落p的样式：不显示*/
+	display:none;
+}
+.h-content .search .s-submit{  /*搜索表单中提交按钮.s-submit 的样式*/
+	position: absolute;      /*绝对定位，以父元素.search表单为参照对象*/
+	bottom:6px;           /*垂直位置位于表单下边线之上6px*/
+	right:0px;             /*水平位置与表单右对齐*/
+	width: 20px;           /*设置宽度*/
+	height: 20px;           /*设置高度*/
+	border:0;              /*无边框*/
+	outline:none;           /*无轮廓*/
+	background:url('images/header/icon-header.png') no-repeat 0px -25px; 
+     /*设置背景图片：从指定图片中获取相应部分作为背景*/
+}
+.h-content .search p{  /*设置搜索表单中的段落样式：用绝对定位控制段落位置*/
+	position: absolute;
+	left:15px;
+	top:5px;
+}
+.h-content .search p a{   /*设置搜索表单中的段落中的超链接样式*/
+	margin-right:10px;
+	background-color: #eee;
+	font-size:12px;
+}

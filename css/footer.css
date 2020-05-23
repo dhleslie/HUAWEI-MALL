@@ -1,0 +1,146 @@
+#footer{
+	background-color:#F0F0F0;
+}
+
+
+.f-slogan{/*为.f-slogan设置下边框，用于与.f-service的分隔 */
+	border-bottom:1px solid #ccc;
+}
+.f-slogan li{/*设置.f-slogan中每一个列表项的样式：宽度、高度和行高*/
+	width: 300px;
+	height: 138px;
+	line-height: 138px;/*行高和高度相等，列表项中的内容将垂直居中*/
+}
+.f-slogan li a{  /*每一个列表项中的超链接的样式：字体大小和字体颜色*/
+	font-size:20px;
+	color:#333;
+}
+.f-slogan li a i{ /*设置每一句标语文字前的图标样式*/
+	display: inline-block;  /*行内块*/
+	width: 47px;         /*设置宽度*/
+	height: 47px;         /*设置高度*/
+	margin-right:15px;     /*设置右外边距*/
+	background:url('images/footer/icon-common.png') no-repeat;  /*设置背景图片*/
+	vertical-align:middle;   /*设置垂直对齐方式*/
+}
+/*不同标语前的图标，截取背景图片中不同的部分*/
+.f-slogan li a i.first{
+	background-position: 0px -150px;
+}
+.f-slogan li a i.second{
+	background-position: -94px -150px;
+}
+.f-slogan li a i.third{
+	background-position: -140px -150px;
+}
+.f-slogan li a i.fourth{
+	background-position: -47px -150px;
+}
+
+
+.f-service{ /*设置.f-service的高度*/
+	height: 216px;
+}
+.f-service dl{  /*设置.f-service中的定义列表的宽度和上外边距*/
+	width: 157px;
+	margin-top:30px;
+}
+.f-service dt{  
+/*设置.f-service中定义列表的标题样式：相对定位、内边距、字体大小、文字颜色*/
+	position: relative;
+	padding:20px 0;
+	font-size:13px;
+	color:#666;
+}
+.f-service dd{/*定义定义列表中的“描述”部分的样式：下外边距和字体大小*/
+	margin-bottom:10px;
+	font-size: 12px;
+}
+/*通过:after伪元素，在.f-service中的每个定义列表的“定义项目” 之后插入内容：插入一个宽度为22px、高度为2px的灰色块，显示于“定义项目”的上方（绝对定位实现）*/
+.f-service dt:after{
+	position:absolute;
+	top:0;
+	left:0;
+	content:'';
+	width: 22px;
+	height: 2px;
+	background-color:#999;
+}
+/*设置.arrow的定义列表中的span样式：行内块、宽度、高度、行高、文字颜色、背景色、水平对齐、圆角边框*/
+.f-service dl.arrow span{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	line-height:14px;
+	color:#fff;
+	background-color:#B3B3B3;
+	text-align: center;
+	border-radius:3px;
+}
+.f-service dl.arrow span.first{  /*设置.arrow类的定义列表中的.first类的span样式*/
+	background-color:#CCC;
+}
+.f-service dl.last-one{ /*设置.last-one类的定义列表样式：左内边距、宽度、左边框*/
+	padding-left:40px;
+	width: 209px;
+	border-left:1px solid #DEDEDE;
+}
+.f-service dl.last-one dt{ /*设置.last-one类的定义列表中的dt样式*/
+	font-size:24px ;
+	color:#333;
+}
+.f-service dl.last-one dd{ /*设置.last-one类的定义列表中的dd样式*/
+	color:#B6B6B6;
+}
+.f-service dl.last-one dd a{
+ /*设置.last-one类的定义列表中的dd中超链接样式，即“在线客服”部分的样式*/
+	display: block;
+	width: 160px;
+	height: 35px;
+	border:1px solid #eee;
+	border-radius:5px;
+	background-color: #fff;
+	line-height: 35px;
+	text-align:center;
+	color:#CA151D;
+	font-size:14px;
+} 
+.f-service dl.last-one dd a i{
+/*设置.last-one类的定义列表中的dd中超链接中的i标签样式，即“在线客服”文字部分前面图标的样式*/
+	display: inline-block;
+	width: 22px;
+	height: 18px;
+	margin-right:10px;
+	background:url('images/footer/icon-common.png') no-repeat -101px -21px;
+	vertical-align: middle;
+}
+
+
+.f-container{/*设置.f-container块的样式：背景色、高度、内边距*/
+	background-color:#E6E6E6;
+	height:60px;
+	padding:30px 0;
+}
+.f-container .left{  /*设置.f-container块中的.left样式：上内边距*/
+	padding-top:20px;
+}
+.f-container .middle{  /*设置.f-container块中的.middle样式*/
+	margin-left:35px;
+	margin-right:105px;
+	font-size:12px;
+	color:#B6B6B6;
+}
+.f-container .middle p{/*设置.f-container块中的.middle块中的段落样式*/
+	line-height:20px;
+}
+.f-container .right{  /*设置.f-container块中的.right块样式*/
+	padding-top:17px;
+}
+.f-container .right li{ /*设置.f-container块中的.middle块中每一个列表项的右外边距*/
+	margin-right:5px;
+}
+.f-container .right img{ /*设置.f-container块中的.middle块中每一个图片的样式*/
+	width:70px;
+	height:24px;
+}
+
