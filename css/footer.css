@@ -20,7 +20,7 @@
 	width: 47px;         /*设置宽度*/
 	height: 47px;         /*设置高度*/
 	margin-right:15px;     /*设置右外边距*/
-	background:url('images/footer/icon-common.png') no-repeat;  /*设置背景图片*/
+	background:url('../images/footer/icon-common.png') no-repeat;  /*设置背景图片*/
 	vertical-align:middle;   /*设置垂直对齐方式*/
 }
 /*不同标语前的图标，截取背景图片中不同的部分*/
@@ -111,7 +111,7 @@
 	width: 22px;
 	height: 18px;
 	margin-right:10px;
-	background:url('images/footer/icon-common.png') no-repeat -101px -21px;
+	background:url('../images/footer/icon-common.png') no-repeat -101px -21px;
 	vertical-align: middle;
 }
 

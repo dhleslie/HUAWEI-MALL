@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/header.css"> <!-- 引入header.css -->
     <link rel="stylesheet" type="text/css" href="css/content.css"> <!-- 引入content.css -->
     <link rel="stylesheet" type="text/css" href="css/footer.css"> <!-- 引入footer.css -->
+    <script src="../jquery-3.4.1.js"></script> <!-- 引入jquery-3.4.1.js -->
+    <script src="js/header.js"></script> <!-- 引入header.js -->
 </head>
 
 <body>
@@ -41,6 +43,13 @@
                     <li class="fl"><a href="#">企业购</a></li>
                     <li class="fl"><a href="#">Select Region</a></li>
                     <li class="fl more">
+                        <a href="#">下载App</a>
+                        <div class="more-con">
+                            <a href=""><img src="images/header/02 code.png" alt=""></a>
+                            <p>扫一扫，<a href="#">下载App</a></p>
+                        </div>
+                    </li>
+                    <li class="fl more">
                         <!-- 为该菜单项增加.more样式，用于控制下拉菜单.more-con的显示和隐藏 -->
                         <a href="">更多精彩</a>
                         <div class="more-con">
@@ -51,7 +60,6 @@
                             <p><a href="">开发者联盟</a></p>
                         </div>
                     </li>
-
                 </ul>
 
                 <!-- 接着定义右边浮动横向菜单。.fr实现右浮动；clearfix恢复h-n-r元素高度 -->
@@ -60,16 +68,13 @@
                     <li class="fl no-bor"><a href="#">注册</a></li>
                     <!-- 此处“请登录”和“注册”之间没有分隔线，定义样式.no-bor实现 -->
                     <li class="fl"><a href="#">我的订单</a></li>
-                    <li class='fl car'>
-                        <!-- 增加.car样式，用于控制购物车块.c-con的显示和隐藏 -->
+                    <li class='fl car'> <!-- 增加.car样式，用于控制购物车块.c-con的显示和隐藏 -->
                         <a href="">购物车(0)</a>
-                        <div class="car-con">
-                            <!-- 定义购物车块.c-con，内容包含一个图片和一个段落  -->
+                        <div class="car-con"> <!-- 定义购物车块.c-con，内容包含一个图片和一个段落  -->
                             <img src="images/header/03 shopping car.png" alt="">
-                            <p>您的购物车是空的，快去选购吧</p>
+                            <p>您的购物车是空的，赶紧选购吧~</p>
                         </div>
                     </li>
-
                 </ul>
             </div>
 
@@ -91,19 +96,18 @@
                 <!-- 右边搜索表单.search：.fr右浮动。表单中有一个文本框. search-bar,
                     一个包含两个超链接的段落，以及一个提交按钮. s-submit -->
                 <form action="" class="search fr" name="">
-                    <input type="text" name="" class="search-bar">
-                    <p><a href="">HUAWEI P20</a><a href="#">荣耀10</a></p>
+                    <input type="text" name="key" class="search-bar">
+                    <p><a href="">HUAWEI P20</a><a href="#">荣耀10X</a></p>
                     <input type="submit" name="" class="s-submit" value="">
                 </form>
             </div>
-
         </div>
         <!--定义header部分-->
 
 
         <!--定义content部分-->
-        <div id="content ">
-            <div class="c-banner">
+        <div id="content">
+            <div class="c-banner"><!-- /*.c-banner块*/ -->
                 <ul class="c-b-con">
                     <li><img src="images/content/00 banner/banner-1.jpg"></li>
                     <li><img src="images/content/00 banner/banner-2.jpg"></li>
@@ -114,10 +118,8 @@
                     <li><img src="images/content/00 banner/banner-7.jpg"></li>
                     <li><img src="images/content/00 banner/banner-8.jpg"></li>
                 </ul>
-                <ul class="c-b-btn clearfix">
-                    <!-- /*.c-b-btn块：.clearfix清除浮动恢复高度*/ -->
-                    <li class='fl first'></li>
-                    <!-- /*所有列表项都是.fl左浮动，实现同行排列*/ -->
+                <ul class="c-b-btn clearfix"><!-- /*.c-b-btn块：.clearfix清除浮动恢复高度*/ -->
+                    <li class='fl first'></li><!-- /*所有列表项都是.fl左浮动，实现同行排列*/ -->
                     <li class='fl'></li>
                     <li class='fl'></li>
                     <li class='fl'></li>
@@ -127,10 +129,8 @@
                     <li class='fl'></li>
                 </ul>
                 <div class="c-menu">
-                    <ul class='c-m-con'>
-                        <!-- 通过.c-m-con无序列表将各个菜单项组织在一起 -->
-                        <li>
-                            <!-- 第一个菜单项   -->
+                    <ul class='c-m-con'> <!-- 通过.c-m-con无序列表将各个菜单项组织在一起 -->
+                        <li> <!-- 第一个菜单项   -->
                             <!-- 每个菜单项包含两行文字，用p标签实现分行，另外还有子菜单c-submenu -->
                             <p>
                                 <a href="#">手机</a>
@@ -140,17 +140,14 @@
                                 <a href="#"> HUAWEI P系列</a>
                                 <i></i><!-- i标签实现图标显示 -->
                             </p>
-                            <div class="c-submenu">
-                                <!-- 第一个菜单项的子菜单c-submenu -->
-                                <div class="sub-floor1">
-                                    <!-- /*子菜单第一部分.sub-floor1*/ -->
+                            <div class="c-submenu"> <!-- 第一个菜单项的子菜单c-submenu -->
+                                <div class="sub-floor1"> <!-- /*子菜单第一部分.sub-floor1*/ -->
                                     <a href="#" class='clearfix'>
                                         <span>浏览手机频道</span>
                                         <span class='fr'>></span><!-- /*.fr将span标签转换为块元素，并且右浮动*/ -->
                                     </a>
                                 </div>
-                                <div class="sub-floor2">
-                                    <!-- /*子菜单第二部分.sub-floor2*/ -->
+                                <div class="sub-floor2"> <!-- /*子菜单第二部分.sub-floor2*/ -->
                                     <p>
                                         <a href="#">荣耀</a>
                                         <a href="#">HUAWEI P系列</a>
@@ -164,8 +161,7 @@
                                         <a href="#">移动4G+专区</a>
                                     </p>
                                 </div>
-                                <ul class='sub-floor3 clearfix'>
-                                    <!-- /*子菜单第三部分.sub-floor3,.clearfix恢复高度*/ -->
+                                <ul class='sub-floor3 clearfix'> <!-- /*子菜单第三部分.sub-floor3,.clearfix恢复高度*/ -->
                                     <li class='fl'>
                                         <a href="#">
                                             <img src="images/content/00 banner/subMenu/li-0101.jpg" alt="">
@@ -175,21 +171,21 @@
                                     </li>
                                     <li class='fl'>
                                         <a href="#">
-                                            <img src="images/content/00 banner/subMenu/li-0101.jpg" alt="">
+                                            <img src="images/content/00 banner/subMenu/li-0102.jpg" alt="">
                                             <p class='pro-name'>荣耀10</p>
                                             <p class='pro-price'>￥2299</p>
                                         </a>
                                     </li>
                                     <li class='fl'>
                                         <a href="#">
-                                            <img src="images/content/00 banner/subMenu/li-0101.jpg" alt="">
+                                            <img src="images/content/00 banner/subMenu/li-0103.jpg" alt="">
                                             <p class='pro-name'>HUAWEI P20</p>
                                             <p class='pro-price'>￥3388</p>
                                         </a>
                                     </li>
                                     <li class='fl'>
                                         <a href="#">
-                                            <img src="images/content/00 banner/subMenu/li-0101.jpg" alt="">
+                                            <img src="images/content/00 banner/subMenu/li-0104.jpg" alt="">
                                             <p class='pro-name'>荣耀8X</p>
                                             <p class='pro-price'>￥1399</p>
                                         </a>
@@ -197,8 +193,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li>
-                            <!-- 第二个菜单项   -->
+                        <li> <!-- 第二个菜单项   -->
                             <p>
                                 <a href="#">笔记本&平板</a>
                             </p>
@@ -207,50 +202,343 @@
                                 <a href="#">笔记本电脑</a>
                                 <i></i>
                             </p>
-                            <div class="c-submenu">…</div>
+                            <div class="c-submenu"> <!-- 第二个菜单项的子菜单c-submenu -->
+                                <div class="sub-floor1"> <!-- /*子菜单第一部分.sub-floor1*/ -->
+                                    <a href="#" class='clearfix'>
+                                        <span>浏览笔记本&平板频道</span>
+                                        <span class='fr'>&gt;</span><!-- .fr将span标签转换为块元素，并且右浮动 &gt;表示'<' -->
+                                    </a>
+                                </div>
+                                <div class="sub-floor2"> <!-- /*子菜单第二部分.sub-floor2*/ -->
+                                    <p>
+                                        <a href="#">平板</a>
+                                        <a href="#">笔记本电脑</a>
+                                        <a href="#">笔记本配件</a>
+                                    </p>
+                                </div>
+                                <ul class='sub-floor3 clearfix'> <!-- /*子菜单第三部分.sub-floor3,.clearfix恢复高度*/ -->
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0201.jpg" alt="">
+                                            <p class='pro-name'>华为Matebook X</p>
+                                            <p class='pro-price'>￥5999</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0202.jpg" alt="">
+                                            <p class='pro-name'>华为畅享系列</p>
+                                            <p class='pro-price'>￥4299</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0203.jpg" alt="">
+                                            <p class='pro-name'>华为Matebook D</p>
+                                            <p class='pro-price'>￥2988</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0204.jpg" alt="">
+                                            <p class='pro-name'>华为MatePad</p>
+                                            <p class='pro-price'>￥3399</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
-                        <li>…</li><!-- 第三个菜单项：以下几个菜单的制作与前两个类似，只是菜单项的文字不同，故省略  -->
-                        <li>…</li><!-- 第四个菜单项 -->
-                        <li>…</li><!-- 第五个菜单项 -->
-                        <li>…</li><!-- 第六个菜单项 -->
+                        <li><!-- 第三个菜单项  -->
+                            <p>
+                                <a href="#">智能穿戴</a>
+                            </p>
+                            <p>
+                                <a href="#">手环</a>
+                                <a href="#">手表</a>
+                                <a href="#">VR</a>
+                                <i></i>
+                            </p>
+                            <div class="c-submenu"> <!-- 第三个菜单项的子菜单c-submenu -->
+                                <div class="sub-floor1"> <!-- /*子菜单第一部分.sub-floor1*/ -->
+                                    <a href="#" class='clearfix'>
+                                        <span>浏览智能穿戴频道</span>
+                                        <span class='fr'>></span><!-- /*.fr将span标签转换为块元素，并且右浮动*/ -->
+                                    </a>
+                                </div>
+                                <div class="sub-floor2"> <!-- /*子菜单第二部分.sub-floor2*/ -->
+                                    <p>
+                                        <a href="#">荣耀手环系列</a>
+                                        <a href="#">华为儿童手表系列</a>
+                                        <a href="#">荣耀手表系列</a>
+                                        <a href="#">华为手环系列</a>
+                                    </p>
+                                    <p>
+                                        <a href="#">HUAWEI nova系列</a>
+                                        <a href="#">HUAWEI 麦芒系列</a>
+                                        <a href="#">华为畅享系列</a>
+                                        <a href="#">移动4G+专区</a>
+                                    </p>
+                                </div>
+                                <ul class='sub-floor3 clearfix'> <!-- /*子菜单第三部分.sub-floor3,.clearfix恢复高度*/ -->
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0301.jpg" alt="">
+                                            <p class='pro-name'>荣耀手环4</p>
+                                            <p class='pro-price'>￥99</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0302.jpg" alt="">
+                                            <p class='pro-name'>HUAWEI WATCH GT2</p>
+                                            <p class='pro-price'>￥1488</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0303.jpg" alt="">
+                                            <p class='pro-name'>荣耀手环4 Running版</p>
+                                            <p class='pro-price'>￥88</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0304.jpg" alt="">
+                                            <p class='pro-name'>华为手环 B5</p>
+                                            <p class='pro-price'>￥999</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><!-- 第四个菜单项 -->
+                            <p>
+                                <a href="#">智能家居</a>
+                            </p>
+                            <p>
+                                <a href="#">路由器</a>
+                                <a href="#">电视盒子</a>
+                                <a href="#">照明</a>
+                                <i></i>
+                            </p>
+                            <div class="c-submenu"> <!-- 第四个菜单项的子菜单c-submenu -->
+                                <div class="sub-floor1"> <!-- /*子菜单第一部分.sub-floor1*/ -->
+                                    <a href="#" class='clearfix'>
+                                        <span>浏览智能家居频道</span>
+                                        <span class='fr'>></span><!-- /*.fr将span标签转换为块元素，并且右浮动*/ -->
+                                    </a>
+                                </div>
+                                <div class="sub-floor2"> <!-- /*子菜单第二部分.sub-floor2*/ -->
+                                    <p>
+                                        <a href="#">荣耀</a>
+                                        <a href="#">HUAWEI P系列</a>
+                                        <a href="#">荣耀畅玩系列</a>
+                                        <a href="#">HUAWEI Mate系列</a>
+                                    </p>
+                                    <p>
+                                        <a href="#">HUAWEI nova系列</a>
+                                        <a href="#">HUAWEI 麦芒系列</a>
+                                        <a href="#">华为畅享系列</a>
+                                        <a href="#">移动4G+专区</a>
+                                    </p>
+                                </div>
+                                <ul class='sub-floor3 clearfix'> <!-- /*子菜单第三部分.sub-floor3,.clearfix恢复高度*/ -->
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0401.jpg" alt="">
+                                            <p class='pro-name'>HUAWEI nova 3</p>
+                                            <p class='pro-price'>￥2999</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0402.jpg" alt="">
+                                            <p class='pro-name'>荣耀10</p>
+                                            <p class='pro-price'>￥2299</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0403.jpg" alt="">
+                                            <p class='pro-name'>HUAWEI P20</p>
+                                            <p class='pro-price'>￥3388</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0404.jpg" alt="">
+                                            <p class='pro-name'>荣耀8X</p>
+                                            <p class='pro-price'>￥1399</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><!-- 第五个菜单项 -->
+                            <p>
+                                <a href="#">通用配件</a>
+                            </p>
+                            <p>
+                                <a href="#">移动电源</a>
+                                <a href="#">耳机</a>
+                                <a href="#">音箱</a>
+                                <i></i>
+                            </p>
+                            <div class="c-submenu"> <!-- 第五个菜单项的子菜单c-submenu -->
+                                <div class="sub-floor1"> <!-- /*子菜单第一部分.sub-floor1*/ -->
+                                    <a href="#" class='clearfix'>
+                                        <span>浏览通用配件频道</span>
+                                        <span class='fr'>></span><!-- /*.fr将span标签转换为块元素，并且右浮动*/ -->
+                                    </a>
+                                </div>
+                                <div class="sub-floor2"> <!-- /*子菜单第二部分.sub-floor2*/ -->
+                                    <p>
+                                        <a href="#">荣耀</a>
+                                        <a href="#">HUAWEI P系列</a>
+                                        <a href="#">荣耀畅玩系列</a>
+                                        <a href="#">HUAWEI Mate系列</a>
+                                    </p>
+                                    <p>
+                                        <a href="#">HUAWEI nova系列</a>
+                                        <a href="#">HUAWEI 麦芒系列</a>
+                                        <a href="#">华为畅享系列</a>
+                                        <a href="#">移动4G+专区</a>
+                                    </p>
+                                </div>
+                                <ul class='sub-floor3 clearfix'> <!-- /*子菜单第三部分.sub-floor3,.clearfix恢复高度*/ -->
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0401.jpg" alt="">
+                                            <p class='pro-name'>HUAWEI nova 3</p>
+                                            <p class='pro-price'>￥2999</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0402.jpg" alt="">
+                                            <p class='pro-name'>荣耀10</p>
+                                            <p class='pro-price'>￥2299</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0403.jpg" alt="">
+                                            <p class='pro-name'>HUAWEI P20</p>
+                                            <p class='pro-price'>￥3388</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0404.jpg" alt="">
+                                            <p class='pro-name'>荣耀8X</p>
+                                            <p class='pro-price'>￥1399</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><!-- 第六个菜单项 -->
+                            <p>
+                                <a href="#">专属配件</a>
+                            </p>
+                            <p>
+                                <a href="#">保护壳</a>
+                                <a href="#">保护套</a>
+                                <a href="#">贴膜</a>
+                                <i></i>
+                            </p>
+                            <div class="c-submenu"> <!-- 第六个菜单项的子菜单c-submenu -->
+                                <div class="sub-floor1"> <!-- /*子菜单第一部分.sub-floor1*/ -->
+                                    <a href="#" class='clearfix'>
+                                        <span>浏览专属配件频道</span>
+                                        <span class='fr'>></span><!-- /*.fr将span标签转换为块元素，并且右浮动*/ -->
+                                    </a>
+                                </div>
+                                <div class="sub-floor2"> <!-- /*子菜单第二部分.sub-floor2*/ -->
+                                    <p>
+                                        <a href="#">荣耀</a>
+                                        <a href="#">HUAWEI P系列</a>
+                                        <a href="#">荣耀畅玩系列</a>
+                                        <a href="#">HUAWEI Mate系列</a>
+                                    </p>
+                                    <p>
+                                        <a href="#">HUAWEI nova系列</a>
+                                        <a href="#">HUAWEI 麦芒系列</a>
+                                        <a href="#">华为畅享系列</a>
+                                        <a href="#">移动4G+专区</a>
+                                    </p>
+                                </div>
+                                <ul class='sub-floor3 clearfix'> <!-- /*子菜单第三部分.sub-floor3,.clearfix恢复高度*/ -->
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0601.jpg" alt="">
+                                            <p class='pro-name'>HUAWEI nova 3</p>
+                                            <p class='pro-price'>￥2999</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0602.jpg" alt="">
+                                            <p class='pro-name'>荣耀10</p>
+                                            <p class='pro-price'>￥2299</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0603.jpg" alt="">
+                                            <p class='pro-name'>HUAWEI P20</p>
+                                            <p class='pro-price'>￥3388</p>
+                                        </a>
+                                    </li>
+                                    <li class='fl'>
+                                        <a href="#">
+                                            <img src="images/content/00 banner/subMenu/li-0604.jpg" alt="">
+                                            <p class='pro-name'>荣耀8X</p>
+                                            <p class='pro-price'>￥1399</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
             </div>
 
-            <div class="c-nav m-w clearfix">
-                <!-- /*.c-nav 块：.m-w控制宽度和自动居中，.clearfix恢复其高度*/ -->
-                <div class="c-n-login fl">
-                    <!-- /*第一小块.c-n-login，三块都.fl左浮动，实现同行排列*/ -->
+            <div class="c-nav m-w clearfix"> <!-- /*.c-nav 块：.m-w控制宽度和自动居中，.clearfix恢复其高度*/ -->
+                <div class="c-n-login fl"> <!-- /*第一小块.c-n-login，三块都.fl左浮动，实现同行排列*/ -->
                     <img class="fl" src="images/content/01 login and icon/img_not_logged_in.png" alt="">
                     <!-- /*图片和右边的段落需要同行排列，用.fl控制左浮动*/ -->
-                    <div class='c-l-con fl'>
-                        <!-- /*.c-n-login中的文字块. c-l-con，.fl左浮动*/ -->
+                    <div class='c-l-con fl'> <!-- /*.c-n-login中的文字块. c-l-con，.fl左浮动*/ -->
                         <p class='txt'>
-                            欢迎来到华为商城，请 <a href="">登录</a>还没账号？ <a href="">注册</a> 即可享受&nbsp;&nbsp;&nbsp;&nbsp;>
+                            欢迎来到华为商城，请<a href="">登录</a>还没账号？<a href="">注册</a>即可享受&nbsp;&nbsp;&nbsp;&nbsp;>
                         </p>
                         <a href="">新人福利</a><a href="">会员频道</a>
                     </div>
                 </div>
-                <div class="c-select fl">
-                    <!-- /*第二小块.c-select：包含一个有6个菜单项的无序列表*/ -->
+                <div class="c-select fl"> <!-- /*第二小块.c-select：包含一个有6个菜单项的无序列表*/ -->
                     <ul class="clearfix">
+                        <li class="fl"> <!-- /*i标签实现图标显示*/ --> 
+                            <a href="#"><i></i>企业购特惠</a> 
+                        </li> 
                         <li class="fl">
-                            <a href="#"><i></i>镭雕定制</a> </li> <!-- /*i标签实现图标显示*/ -->
+                            <a href="#"><i class="second"></i>以旧换新</a> 
+                        </li>
                         <li class="fl">
-                            <a href="#"><i class="second"></i>新品开售</a> </li>
+                            <a href="#"><i class="third"></i>会员领劵</a> 
+                        </li>
                         <li class="fl">
-                            <a href="#"><i class="third"></i>优享购 </a> </li>
+                            <a href="#"><i class="fourth"></i>Magic2</a> 
+                        </li>
                         <li class="fl">
-                            <a href="#"><i class="fourth"></i>以旧换新</a> </li>
+                            <a href="#"><i class="fifth"></i>全款订购</a> 
+                        </li>
                         <li class="fl">
-                            <a href="#"><i class="fifth"></i> 企业购p20</a> </li>
-                        <li class="fl">
-                            <a href="#"><i class="sixth"></i>数码特惠</a> </li>
+                            <a href="#"><i class="sixth"></i>优选配件</a> 
+                        </li>
                     </ul>
                 </div>
-                <div class="c-notice fl">
-                    <!-- /*第三小块.c-notice*/ -->
+                <div class="c-notice fl"> <!-- /*第三小块.c-notice*/ -->
                     <p class="c-n-txt">
                         <i></i> <!-- /*i标签实现图标显示*/ -->
                         <a href="#">荣耀10新品首发 预约购机享10重好礼...</a>
@@ -261,21 +549,20 @@
                             优购码
                         </a>
                         <a href="#" class="fl">
-                            <span class="second"></span>优购码
+                            <span class="second"></span>
+                            实名认证
                         </a>
                         <a href="#" class="fl">
-                            <span class="third"></span>优购码
+                            <span class="third"></span>
+                            补购保障
                         </a>
                     </p>
                 </div>
             </div>
 
-            <div class="c-promo m-w">
-                <!-- /* .c-promo 块：.m-w控制宽度且自动居中*/ -->
-                <ul class="clearfix">
-                    <!-- /* .clearfix恢复高度*/ -->
-                    <li class="fl">
-                        <!-- /* 所有li均.fl左浮动，实现同行排列*/ -->
+            <div class="c-promo m-w"> <!-- /* .c-promo 块：.m-w控制宽度且自动居中*/ -->
+                <ul class="clearfix"> <!-- /* .clearfix恢复高度*/ -->
+                    <li class="fl"> <!-- /* 所有li均.fl左浮动，实现同行排列*/ -->
                         <a href=""><img src="images/content/02 promo/promo-1.png" alt=""></a>
                     </li>
                     <li class="fl">
@@ -290,76 +577,142 @@
                 </ul>
             </div>
 
-            <div class="hots-goods m-w special">
-                <!-- /*.hots-goods块：m-w控制宽度和自动居中；.special控制商品信息通用样式*/ -->
-                <div class="goods-title clearfix">
-                    <!-- /*设置商品标题样式. goods-title */ -->
+            <div class="hots-goods m-w special"> <!-- /*.hots-goods块：m-w控制宽度和自动居中；.special控制商品信息通用样式*/ -->
+                <div class="goods-title clearfix"> <!-- /*设置商品标题样式. goods-title */ -->
                     <h2 class='fl'>热销单品</h2>
                 </div>
-                <div class="goods-con">
-                    <!-- /*定义商品信息列表.goods-con*/ -->
+                <div class="goods-con"> <!-- /*定义商品信息列表.goods-con*/ -->
                     <ul class='clearfix'>
                         <li class='fl'>
                             <a href="#"><img src="images/content/03 hots-goods/1.jpg" alt=""></a>
                         </li>
-                        <li class='fl new'>
-                            <!-- /*.new样式用于在图片上显示“新品”字样*/ -->
+                        <li class='fl hot'> <!-- /*.hot样式用于在图片上显示“热卖”字样*/ -->
                             <a href="#">
                                 <img src="images/content/03 hots-goods/2.jpg" alt="">
-                                <p class='pro-name'>荣耀V10</p>
+                                <p class='pro-name'>荣耀10</p>
                                 <p class='pro-desc'>最高优惠400 赠豪华礼包</p>
-                                <p class='pro-price'>￥2299</p>
+                                <p class='pro-price'>￥2199</p>
                             </a>
                         </li>
-                        <li class='fl down'>
-                            <!-- /*.down样式用于在图片上显示“直降”字样*/ -->
+                        <li class='fl'> 
                             <a href="#">
                                 <img src="images/content/03 hots-goods/3.jpg" alt="">
-                                <p class='pro-name'>HUAWEI P20 </p>
-                                <p class='pro-desc'>新一代徕卡双摄 AI摄影大师</p>
+                                <p class='pro-name'>HUAWEI P20 Pro</p>
+                                <p class='pro-desc'>享6期免息 限量好礼</p>
+                                <p class='pro-price'>￥4988</p>
+                            </a>
+                        </li>
+                        <li class='fl very'> <!-- /*.very样式用于在图片上显示“爆款”字样*/ -->
+                            <a href="#">
+                                <img src="images/content/03 hots-goods/4.jpg" alt="">
+                                <p class='pro-name'>荣耀畅玩8C</p>
+                                <p class='pro-desc'>32G版限时优惠100</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl new'> <!-- /*.new样式用于在图片上显示“新品”字样*/ -->
+                            <a href="#">
+                                <img src="images/content/03 hots-goods/5.jpg" alt="">
+                                <p class='pro-name'>HUAWEI P20</p>
+                                <p class='pro-desc'>享6期免息 限量好礼</p>
                                 <p class='pro-price'>￥3388</p>
                             </a>
                         </li>
-                        <li class='fl'>…</li> <!-- /*后面li标签里面的内容与前2个li类似，不再赘述*/ -->
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
+                        <li class='fl very'> <!-- /*.very样式用于在图片上显示“爆款”字样*/ -->
+                            <a href="#">
+                                <img src="images/content/03 hots-goods/6.jpg" alt="">
+                                <p class='pro-name'>荣耀V10</p>
+                                <p class='pro-desc'>限时优惠800</p>
+                                <p class='pro-price'>￥1999</p>
+                            </a>
+                        </li>
+                        <li class='fl'>
+                            <a href="#">
+                                <img src="images/content/03 hots-goods/7.jpg" alt="">
+                                <p class='pro-name'>HUAWEI nava3</p>
+                                <p class='pro-desc'>领券最高减200+赠保护壳</p>
+                                <p class='pro-price'>￥2599</p>
+                            </a>
+                        </li>
+                        <li class='fl new'> <!-- /*.new样式用于在图片上显示“新品”字样*/ -->
+                            <a href="#">
+                                <img src="images/content/03 hots-goods/8.jpg" alt="">
+                                <p class='pro-name'>荣耀8V Max</p>
+                                <p class='pro-desc'>骁龙660版开卖 7.12英寸珍珠屏</p>
+                                <p class='pro-price'>￥1499</p>
+                            </a>
+                        </li>
+                        <li class='fl new'> <!-- /*.new样式用于在图片上显示“新品”字样*/ -->
+                            <a href="#">
+                                <img src="images/content/03 hots-goods/9.jpg" alt="">
+                                <p class='pro-name'>华为畅享9 Plus</p>
+                                <p class='pro-desc'>64GB版赠超值配件</p>
+                                <p class='pro-price'>￥1499</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="recommend-goods m-w special special1">
-                <!-- /* .recommend-goods块：.m-w控制宽度和自动控制；.special控制展示块通用样式；.special1控制.recommend-goods 块的特殊样式*/ -->
-                <div class="goods-title clearfix">
-                    <!-- /*.clearfix恢复高度*/ -->
+            <div class="recommend-goods m-w special special1"> <!-- /* .recommend-goods块：.m-w控制宽度和自动控制；.special控制展示块通用样式；.special1控制.recommend-goods 块的特殊样式*/ -->
+                <div class="goods-title clearfix"> <!-- /*.clearfix恢复高度*/ -->
                     <h2 class='fl'>精品推荐</h2>
                 </div>
-                <div class="goods-con">
-                    <!-- /*定义商品信息列表. goods-con */  -->
+                <div class="goods-con"> <!-- /*定义商品信息列表. goods-con */  -->
                     <ul class='clearfix'>
-                        <li class='fl new'>
+                        <li class='fl very'>
                             <a href="#">
-                                <img src="images/content/03 recommend-goods/2.jpg" alt="">
+                                <img src="images/content/04 recommend-goods/recommend-goods-1.jpg" alt="">
                                 <p class='pro-name'>荣耀手环4</p>
-                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-desc'>爆款新品放量购</p>
                                 <p class='pro-price'>￥199</p>
                             </a>
                         </li>
-                        <!-- /*以下5个li结构的定义同第一个类似，篇幅所限，不再赘述*/ -->
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/04 recommend-goods/recommend-goods-2.jpg" alt="">
+                                <p class='pro-name'>荣耀手环4</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥299</p>
+                            </a>
+                        </li>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/04 recommend-goods/recommend-goods-3.jpg" alt="">
+                                <p class='pro-name'>荣耀电子秤</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥99</p>
+                            </a>
+                        </li>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/04 recommend-goods/recommend-goods-4.jpg" alt="">
+                                <p class='pro-name'>耳机</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥159</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/04 recommend-goods/recommend-goods-5.jpg" alt="">
+                                <p class='pro-name'>华为Matebook</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥3199</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/04 recommend-goods/recommend-goods-6.jpg" alt="">
+                                <p class='pro-name'>荣耀电子秤</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥119</p>
+                            </a>
+                        </li>
                     </ul>
-                    <div class="left-btn">
-                        <!-- /*定义展示块左端按钮*/ -->
+                    <div class="left-btn"> <!-- /*定义展示块左端按钮*/ -->
                         <a href=""><i></i></a>
                     </div>
-                    <div class="right-btn">
-                        <!-- /*定义展示块右端按钮*/ -->
+                    <div class="right-btn"> <!-- /*定义展示块右端按钮*/ -->
                         <a href=""><i></i></a>
                     </div>
                 </div>
@@ -367,15 +720,21 @@
 
             <div class="c-banner2 m-w"> <!-- /*. c-banner2 块：.m-w控制宽度和自动居中*/ -->
                 <ul class='c-b2-con'> <!-- /*图片列表. c-b-con */ -->
-                    <li><a href="#"><img src="images/content/05 m-banner2/1.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="images/content/05 m-banner2/2.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="images/content/05 m-banner2/3.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="images/content/05 m-banner2/4.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="images/content/05 m-banner2/5.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="images/content/05 m-banner2/6.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/content/05 banner2/banner1.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/content/05 banner2/banner2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/content/05 banner2/banner3.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/content/05 banner2/banner4.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/content/05 banner2/banner5.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/content/05 banner2/banner6.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/content/05 banner2/banner7.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/content/05 banner2/banner8.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/content/05 banner2/banner9.jpg" alt=""></a></li>
                 </ul>
                 <ul class='c-b2-btn clearfix'> <!-- /*手动轮播控制块. c-b-btn */ -->
                     <li class='fl first'></li> <!-- /*.first控制与当前显示图片对应的控制按钮的样式*/ -->
+                    <li class='fl'></li>
+                    <li class='fl'></li>
+                    <li class='fl'></li>
                     <li class='fl'></li>
                     <li class='fl'></li>
                     <li class='fl'></li>
@@ -386,61 +745,318 @@
             
             <!-- /*.phone-channel(手机)块：m-w控制宽度和自动居中；.special为通用展示块样式；.special2为该展示块特有样式 */ -->
             <div class="phone-channel m-w special special2">
-                <div class="goods-title clearfix">
-                    <!-- /* 展示块标题栏.goods-title，包括三部分组成：手机+横向导航条+更多，.clearfix恢复高度 */ -->
+                <div class="goods-title clearfix"> <!-- /* 展示块标题栏.goods-title，包括三部分组成：手机+横向导航条+更多，.clearfix恢复高度 */ -->
                     <h2 class='fl'>手机</h2>
-                    <ul class='fl'>
+                    <ul class='fl clearfix'>
                         <li class='fl'><a href="#">荣耀</a></li>
-                        <li class='fl'><a href="#">HUAWEIP系列</a></li>
+                        <li class='fl'><a href="#">HUAWEI P系列</a></li>
                         <li class='fl'><a href="#">荣耀畅玩系列</a></li>
                         <li class='fl'><a href="#">HUAWEI Mate系列</a></li>
                         <li class='fl'><a href="#">HUAWEI nova系列</a></li>
                         <li class='fl'><a href="#">HUAWEI 麦芒系列</a></li>
                         <li class='fl'><a href="#">华为畅享系列</a></li>
+                        <li class='fl'><a href="#">移动4G+专区</a></li>
                     </ul>
-                    <div class="g-more fr">
-                        <!-- /* .g-more块：.fr右浮动*/			 -->
+                    <div class="g-more fr"> <!-- /* .g-more块：.fr右浮动*/  -->
                         <a href="#">更多></a>
                     </div>
                 </div>
                 <!-- /*以下定义商品信息块. goods-con */ -->
                 <div class="goods-con">
-                    <ul class='clearfix'>
-                        <!-- /*商品信息列表定义*/ -->
-                        <li class='fl first'>
-                            <!-- /*定义第一个商品信息，所有商品信息均.fl左浮动，占满一行之后自动换行*/ -->
-                            <a href="#"><img src="images/content/06 phone-channel/1.jpg" alt="">
+                    <ul class='clearfix'> <!-- /*商品信息列表定义*/ -->
+                        <li class='fl first'> <!-- /*定义第1个商品信息，所有商品信息均.fl左浮动，占满一行之后自动换行*/ -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/1.jpg" alt="">
                             </a>
                         </li>
-                        <li class='fl new'>
-                            <!-- /*定义第二个商品信息，.fl左浮动，.new显示“新品”字样 */ -->
+                        <li class='fl new'> <!-- /*定义第2个商品信息，.fl左浮动，.new显示“新品”字样 */ -->
                             <a href="#">
                                 <img src="images/content/06 phone-channel/2.jpg" alt="">
-                                <p class='pro-name'>荣耀V10</p>
-                                <p class='pro-desc'>最高优惠1000元，赠豪华礼包</p>
-                                <p class='pro-price'>￥1899</p>
+                                <p class='pro-name'>HUAWEI Mate10 Pro</p>
+                                <p class='pro-desc'>领券立减200+赠好礼</p>
+                                <p class='pro-price'>￥3999</p>
                             </a>
                         </li>
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl no-m '>…</li> <!-- /*定义第五个商品信息,.no-m不设置外边距*/ -->
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl no-m '>…</li> <!-- /*定义第9个商品信息,.no-m不设置外边距*/ -->
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
+                        <li class='fl'> <!-- /*定义第3个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/3.jpg" alt="">
+                                <p class='pro-name'>荣耀畅玩7C</p>
+                                <p class='pro-desc'>降100 高配送耳机+自拍杆</p>
+                                <p class='pro-price'>￥799</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第4个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/4.jpg" alt="">
+                                <p class='pro-name'>华为畅享 MAX</p>
+                                <p class='pro-desc'>赠配件好礼</p>
+                                <p class='pro-price'>￥1699</p>
+                            </a>
+                        </li>
+                        <li class='fl no-m very'> <!-- /*定义第5个商品信息,.no-m不设置外边距*/ .very显示“爆款”字样 -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/5.jpg" alt="">
+                                <p class='pro-name'>HUAWEI Mate10 Pro</p>
+                                <p class='pro-desc'>领券立减200+赠好礼</p>
+                                <p class='pro-price'>￥3999</p>
+                            </a>
+                        </li>
+                        <li class='fl hot'> <!-- /*定义第6个商品信息，.fl左浮动，.hot显示“热卖”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/6.jpg" alt="">
+                                <p class='pro-name'>荣耀Play</p>
+                                <p class='pro-desc'>最高优惠400元 赠豪华礼包</p>
+                                <p class='pro-price'>￥1699</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第7个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/7.jpg" alt="">
+                                <p class='pro-name'>HUAWEI Nava 3i</p>
+                                <p class='pro-desc'>6+64GB版本 领劵立减200</p>
+                                <p class='pro-price'>￥1999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第8个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/8.jpg" alt="">
+                                <p class='pro-name'>荣耀9青春版</p>
+                                <p class='pro-desc'>尊享版降600</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl no-m '> <!-- /*定义第9个商品信息,.no-m不设置外边距*/ -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/9.jpg" alt="">
+                                <p class='pro-name'>HUAWEI Mate10</p>
+                                <p class='pro-desc'>领券立减300+赠好礼</p>
+                                <p class='pro-price'>￥3399</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第10个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/10.jpg" alt="">
+                                <p class='pro-name'>HUAWEI Mate10 Pro</p>
+                                <p class='pro-desc'>领券立减200+赠好礼</p>
+                                <p class='pro-price'>￥3999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第11个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/11.jpg" alt="">
+                                <p class='pro-name'>HUAWEI Mate10 Pro</p>
+                                <p class='pro-desc'>领券立减200+赠好礼</p>
+                                <p class='pro-price'>￥3999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第12个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/06 phone-channel/12.jpg" alt="">
+                                <p class='pro-name'>HUAWEI Mate10 Pro</p>
+                                <p class='pro-desc'>领券立减200+赠好礼</p>
+                                <p class='pro-price'>￥3999</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class=" computer-channel ">…</div> <!-- .computer-channel（笔记本电脑）块 -->
+            <!-- /*.computer-channel（笔记本电脑）块：m-w控制宽度和自动居中；.special为通用展示块样式；.special2为该展示块特有样式 */ -->
+            <div class="computer-channel m-w special special2">
+                <div class="goods-title clearfix"> <!-- /* 展示块标题栏.goods-title，包括三部分组成：手机+横向导航条+更多，.clearfix恢复高度 */ -->
+                    <h2 class='fl'>笔记本电脑</h2>
+                    <ul class='fl clearfix'>
+                        <li class='fl'><a href="#">平板电脑</a></li>
+                        <li class='fl'><a href="#">笔记本电脑</a></li>
+                        <li class='fl'><a href="#">笔记本配件</a></li>
+                    </ul>
+                    <div class="g-more fr"> <!-- /* .g-more块：.fr右浮动*/  -->
+                        <a href="#">更多></a>
+                    </div>
+                </div>
+                <!-- /*以下定义商品信息块. goods-con */ -->
+                <div class="goods-con">
+                    <ul class='clearfix'> <!-- /*8个商品信息列表定义*/ -->
+                        <li class='fl first'> <!-- /*定义第1个商品信息，所有商品信息均.fl左浮动，占满一行之后自动换行*/ -->
+                            <a href="#">
+                                <img src="images/content/07 computer-channel/1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class='fl free'> <!-- /*定义第2个商品信息，.fl左浮动，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/07 computer-channel/2.jpg" alt="">
+                                <p class='pro-name'>荣耀MagicBook</p>
+                                <p class='pro-desc'>购机享6期免息</p>
+                                <p class='pro-price'>￥4999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第3个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/07 computer-channel/3.jpg" alt="">
+                                <p class='pro-name'>HUAWEI MateBook D</p>
+                                <p class='pro-desc'>赠双肩包</p>
+                                <p class='pro-price'>￥6488</p>
+                            </a>
+                        </li>
+                        <li class='fl free'> <!-- /*定义第4个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/07 computer-channel/4.jpg" alt="">
+                                <p class='pro-name'>HUAWEI MateBook E</p>
+                                <p class='pro-desc'>享6期免息</p>
+                                <p class='pro-price'>￥4288</p>
+                            </a>
+                        </li>
+                        <li class='fl no-m free'> <!-- /*定义第5个商品信息,.no-m不设置外边距*/ .very显示“爆款”字样 -->
+                            <a href="#">
+                                <img src="images/content/07 computer-channel/5.jpg" alt="">
+                                <p class='pro-name'>HUAWEI MateBook X</p>
+                                <p class='pro-desc'>享6期免息</p>
+                                <p class='pro-price'>￥8688</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第6个商品信息，.fl左浮动，.hot显示“热卖”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/07 computer-channel/6.jpg" alt="">
+                                <p class='pro-name'>荣耀MagicBook 锐龙版</p>
+                                <p class='pro-desc'>高性能金属轻薄本</p>
+                                <p class='pro-price'>￥3999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第7个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/07 computer-channel/7.jpg" alt="">
+                                <p class='pro-name'>HUAWEI MateBook X Pro</p>
+                                <p class='pro-desc'>享6期免息</p>
+                                <p class='pro-price'>￥8688</p>
+                            </a>
+                        </li>
+                        <li class='fl free'> <!-- /*定义第8个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/07 computer-channel/8.jpg" alt="">
+                                <p class='pro-name'>荣耀MagicBook 锐龙版</p>
+                                <p class='pro-desc'>高颜值时尚轻薄本</p>
+                                <p class='pro-price'>￥4999</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <div class=" panel-computer-channel ">…</div> <!-- .panel-computer-channel（精品平板）块 -->
+            <!-- /*.panel-computer-channel（精品平板）块：m-w控制宽度和自动居中；.special为通用展示块样式；.special2为该展示块特有样式 */ -->
+            <div class="panel-computer-channel m-w special special2">
+                <div class="goods-title clearfix"> <!-- /* 展示块标题栏.goods-title，包括三部分组成：手机+横向导航条+更多，.clearfix恢复高度 */ -->
+                    <h2 class='fl'>精品平板</h2>
+                    <ul class='fl clearfix'>
+                        <li class='fl'><a href="#">平板电脑</a></li>
+                        <li class='fl'><a href="#">笔记本电脑</a></li>
+                        <li class='fl'><a href="#">笔记本配件</a></li>
+                    </ul>
+                    <div class="g-more fr"> <!-- /* .g-more块：.fr右浮动*/  -->
+                        <a href="#">更多></a>
+                    </div>
+                </div>
+                <!-- /*以下定义商品信息块. goods-con */ -->
+                <div class="goods-con">
+                    <ul class='clearfix'> <!-- /*12个商品信息列表定义*/ -->
+                        <li class='fl first'> <!-- /*定义第1个商品信息，所有商品信息均.fl左浮动，占满一行之后自动换行*/ -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第2个商品信息，.fl左浮动，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/2.jpg" alt="">
+                                <p class='pro-name'>荣耀MagicBook</p>
+                                <p class='pro-desc'>购机享6期免息</p>
+                                <p class='pro-price'>￥4999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第3个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/3.jpg" alt="">
+                                <p class='pro-name'>HUAWEI MateBook D</p>
+                                <p class='pro-desc'>赠双肩包</p>
+                                <p class='pro-price'>￥6488</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第4个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/4.jpg" alt="">
+                                <p class='pro-name'>HUAWEI MateBook E</p>
+                                <p class='pro-desc'>享6期免息</p>
+                                <p class='pro-price'>￥4288</p>
+                            </a>
+                        </li>
+                        <li class='fl no-m new'> <!-- /*定义第5个商品信息,.no-m不设置外边距*/ .very显示“爆款”字样 -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/5.jpg" alt="">
+                                <p class='pro-name'>华为畅享平板</p>
+                                <p class='pro-desc'>享3期分期免息</p>
+                                <p class='pro-price'>￥1299</p>
+                            </a>
+                        </li>
+                        <li class='fl hot'> <!-- /*定义第6个商品信息，.fl左浮动，.hot显示“热卖”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/6.jpg" alt="">
+                                <p class='pro-name'>荣耀WaterPlay</p>
+                                <p class='pro-desc'>最高直降300元</p>
+                                <p class='pro-price'>￥1699</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第7个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/7.jpg" alt="">
+                                <p class='pro-name'>华为平板 M5 Pro</p>
+                                <p class='pro-desc'>赠平板支架</p>
+                                <p class='pro-price'>￥3488</p>
+                            </a>
+                        </li>
+                        <li class='fl hot'> <!-- /*定义第8个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/8.jpg" alt="">
+                                <p class='pro-name'>荣耀畅玩平板2 9.6英寸</p>
+                                <p class='pro-desc'>最高直降200</p>
+                                <p class='pro-price'>￥1099</p>
+                            </a>
+                        </li>
+                        <li class='fl no-m'> <!-- /*定义第9个商品信息，.no-m不设置外边距，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/9.png" alt="">
+                                <p class='pro-name'>华为平板 M5 10.8英寸</p>
+                                <p class='pro-desc'>2K高清屏</p>
+                                <p class='pro-price'>￥2488</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第10个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/10.png" alt="">
+                                <p class='pro-name'>华为畅玩平板 2.8英寸</p>
+                                <p class='pro-desc'>最高直降200</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第11个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content//08 panel computer-channel/11.png" alt="">
+                                <p class='pro-name'>华为平板M3青春版 10.1英寸</p>
+                                <p class='pro-desc'>哈曼卡顿品质立体声</p>
+                                <p class='pro-price'>￥1699</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*定义第12个商品信息，.fl左浮动 */ -->
+                            <a href="#">
+                                <img src="images/content/08 panel computer-channel/12.png" alt="">
+                                <p class='pro-name'>华为平板 M5 8英寸</p>
+                                <p class='pro-desc'>增强护眼功能</p>
+                                <p class='pro-price'>￥1399</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <!-- /*.smarthome-channel（智能穿戴）块：.m-w控制宽度和自动居中；.special设置通用样式；.special2沿用.phone-channel商品信息块特有的样式；.special3定义其特有样式*/ -->
-            <div class="smarthome-channel m-w special special2 special3">
+            <!-- /*.smartwatch-channel（智能穿戴）块：.m-w控制宽度和自动居中；.special设置通用样式；.special2沿用.phone-channel商品信息块特有的样式；.special3定义其特有样式*/ -->
+            <div class="smartwatch-channel m-w special special2 special3">
                 <div class="goods-title clearfix"> <!-- /*定义展示块标题.goods-title，包括3部分且同行排列：智能家居+横向导航条+更多 */ -->
                     <h2 class='fl'>智能穿戴</h2>
                     <ul class='fl'>
@@ -454,38 +1070,560 @@
                 </div>
                 <div class="goods-con"> <!-- /*定义商品信息块. goods-con */ -->
                     <ul class='clearfix'> <!-- /*定义商品信息列表，所有商品信息.fl左浮动，占满一行自动换行*/ -->
-                        <li class='fl first'> <!-- /*第一个商品信息块样式由.first控制*/ -->
+                        <li class='fl first'> <!-- /*第1个商品信息块样式由.first控制*/ -->
                             <a href="#">
-                                <img src="images/content/10 smarthome-channel/1.png" alt="">
+                                <img src="images/content/09 smartwatch-channel/1.png" alt="">
                             </a>
                         </li>
-                        <li class='fl new'> <!-- /*第二个商品信息块，.new显示“新品”字样 */ -->
+                        <li class='fl new'> <!-- /*第2个商品信息块，.new显示“新品”字样 */ -->
                             <a href="#">
-                                <img src="images/content/10 smarthome-channel/2.jpg" alt="">
+                                <img src="images/content/09 smartwatch-channel/2.jpg" alt="">
                                 <p class='pro-name'>华为手环V6</p>
                                 <p class='pro-desc'>彩屏健康手环</p>
                                 <p class='pro-price'>￥999</p>
                             </a>
                         </li>
-                        <li class='fl'>…</li> <!-- /*第三个商品信息块*/ -->
-                        <li class='fl no-m'>…</li> <!-- /*第四个商品信息块，.no-m设置外边距为0*/ -->
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
-                        <li class='fl'>…</li>
+                        <li class='fl'> <!-- /*第3个商品信息块 */ -->
+                            <a href="#">
+                                <img src="images/content/09 smartwatch-channel/3.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl no-m very'> <!-- /*第4个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/09 smartwatch-channel/4.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl new'> <!-- /*第5个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/09 smartwatch-channel/5.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl very'> <!-- /*第6个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/09 smartwatch-channel/6.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*第7个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/09 smartwatch-channel/7.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class=" more-goods-channel ">…</div>
-            <div class=" smarthome-channel ">…</div><!-- .smarthome-channel（智能家居）块 -->
-            <div class=" more-goods-channel ">…</div>
-            <div class=" hotparts-channel ">…</div><!-- .hotparts-channel（热销配件）块 -->
-            <div class=" more-goods-channel ">…</div>
-            <div class=" brandparts-channel ">…</div><!-- .brandparts-channel（品牌配件）块 -->
-            <div class=" more-goods-channel ">…</div>
+            <div class="more-goods-channel m-w special special1"> <!-- /* .more-goods-channel（更多商品1）块：.m-w控制宽度和自动控制；.special控制展示块通用样式；.special1控制.more-goods-channel块的特殊样式*/ -->
+                <div class="goods-title clearfix"> <!-- /*.clearfix恢复高度*/ -->
+                    <h2 class='fl'>更多商品</h2>
+                </div>
+                <div class="goods-con"> <!-- /*定义商品信息列表. goods-con */  -->
+                    <ul class='clearfix'>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/10 more-goods-1/1.jpg" alt="">
+                                <p class='pro-name'>荣耀手环4</p>
+                                <p class='pro-desc'>爆款新品放量购</p>
+                                <p class='pro-price'>￥199</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/10 more-goods-1/2.jpg" alt="">
+                                <p class='pro-name'>荣耀手环4</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥299</p>
+                            </a>
+                        </li>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/10 more-goods-1/3.png" alt="">
+                                <p class='pro-name'>荣耀电子秤</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥99</p>
+                            </a>
+                        </li>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/10 more-goods-1/4.png" alt="">
+                                <p class='pro-name'>耳机</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥159</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/10 more-goods-1/5.jpg" alt="">
+                                <p class='pro-name'>华为Matebook</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥3199</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/10 more-goods-1/6.jpg" alt="">
+                                <p class='pro-name'>荣耀电子秤</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥119</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="left-btn"> <!-- /*定义展示块左端按钮*/ -->
+                        <a href=""><i></i></a>
+                    </div>
+                    <div class="right-btn"> <!-- /*定义展示块右端按钮*/ -->
+                        <a href=""><i></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="smarthome-channel m-w special special2 special3"><!-- .smarthome-channel（智能家居）块 -->
+                <div class="goods-title clearfix"> <!-- /*定义展示块标题.goods-title，包括3部分且同行排列：智能家居+横向导航条+更多 */ -->
+                    <h2 class='fl'>智能家居</h2>
+                    <ul class='fl'>
+                        <li class='fl'><a href="#">路由器</a></li>
+                        <li class='fl'><a href="#">子母/分布式路由</a></li>
+                        <li class='fl'><a href="#">电力猫</a></li>
+                        <li class='fl'><a href="#">随行wifi</a></li>
+                        <li class='fl'><a href="#">电视盒子</a></li>
+                        <li class='fl'><a href="#">照明</a></li>
+                        <li class='fl'><a href="#">清洁</a></li>
+                        <li class='fl'><a href="#">节能</a></li>
+                        <li class='fl'><a href="#">环境</a></li>
+                        <li class='fl'><a href="#">安防</a></li>
+                        <li class='fl'><a href="#">健康</a></li>
+                        <li class='fl'><a href="#">厨电</a></li>
+                        <li class='fl'><a href="#">影音</a></li>
+                        <li class='fl'><a href="#">卫浴</a></li>
+                        <li class='fl'><a href="#">其他</a></li>
+                    </ul>
+                    <div class="g-more fr">
+                        <a href="#">更多></a>
+                    </div>
+                </div>
+                <div class="goods-con"> <!-- /*定义商品信息块. goods-con */ -->
+                    <ul class='clearfix'> <!-- /*定义商品信息列表，所有商品信息.fl左浮动，占满一行自动换行*/ -->
+                        <li class='fl first'> <!-- /*第1个商品信息块样式由.first控制*/ -->
+                            <a href="#">
+                                <img src="images/content/11 smarthome-channel/1.png" alt="">
+                            </a>
+                        </li>
+                        <li class='fl new'> <!-- /*第2个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/11 smarthome-channel/2.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*第3个商品信息块 */ -->
+                            <a href="#">
+                                <img src="images/content/11 smarthome-channel/3.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl no-m very'> <!-- /*第4个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/11 smarthome-channel/4.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl new'> <!-- /*第5个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/11 smarthome-channel/5.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl very'> <!-- /*第6个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/11 smarthome-channel/6.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*第7个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/11 smarthome-channel/7.png" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="more-goods-channel m-w special special1"> <!-- /* .more-goods-channel（更多商品2）块：.m-w控制宽度和自动控制；.special控制展示块通用样式；.special1控制.more-goods-channel块的特殊样式*/ -->
+                <div class="goods-title clearfix"> <!-- /*.clearfix恢复高度*/ -->
+                    <h2 class='fl'>更多商品</h2>
+                </div>
+                <div class="goods-con"> <!-- /*定义商品信息列表. goods-con */  -->
+                    <ul class='clearfix'>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/12 more-goods-2/1.jpg" alt="">
+                                <p class='pro-name'>荣耀手环4</p>
+                                <p class='pro-desc'>爆款新品放量购</p>
+                                <p class='pro-price'>￥199</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/12 more-goods-2/2.jpg" alt="">
+                                <p class='pro-name'>荣耀手环4</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥299</p>
+                            </a>
+                        </li>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/12 more-goods-2/3.jpg" alt="">
+                                <p class='pro-name'>荣耀电子秤</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥99</p>
+                            </a>
+                        </li>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/12 more-goods-2/4.jpg" alt="">
+                                <p class='pro-name'>耳机</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥159</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/12 more-goods-2/5.jpg" alt="">
+                                <p class='pro-name'>华为Matebook</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥3199</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/12 more-goods-2/6.jpg" alt="">
+                                <p class='pro-name'>荣耀电子秤</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥119</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="left-btn"> <!-- /*定义展示块左端按钮*/ -->
+                        <a href=""><i></i></a>
+                    </div>
+                    <div class="right-btn"> <!-- /*定义展示块右端按钮*/ -->
+                        <a href=""><i></i></a>
+                    </div>
+                </div>
+            </div>
+         
+            <div class="hotparts-channel m-w special special2 special3"><!-- .hotparts-channel（热销配件）块 -->
+                <div class="goods-title clearfix"> <!-- /*定义展示块标题.goods-title，包括3部分且同行排列：智能家居+横向导航条+更多 */ -->
+                    <h2 class='fl'>热销配件</h2>
+                    <ul class='fl'>
+                        <li class='fl'><a href="#">移动电源</a></li>
+                        <li class='fl'><a href="#">耳机</a></li>
+                        <li class='fl'><a href="#">充电器/线材</a></li>
+                        <li class='fl'><a href="#">自拍杆/支架</a></li>
+                        <li class='fl'><a href="#">音箱</a></li>
+                        <li class='fl'><a href="#">取卡针</a></li>
+                        <li class='fl'><a href="#">U盘/存储器</a></li>
+                        <li class='fl'><a href="#">摄像头/镜头</a></li>
+                        <li class='fl'><a href="#">智能硬件</a></li>
+                        <li class='fl'><a href="#">生活周边</a></li>
+                    </ul>
+                    <div class="g-more fr">
+                        <a href="#">更多></a>
+                    </div>
+                </div>
+                <div class="goods-con"> <!-- /*定义商品信息块. goods-con */ -->
+                    <ul class='clearfix'> <!-- /*定义商品信息列表，所有商品信息.fl左浮动，占满一行自动换行*/ -->
+                        <li class='fl first'> <!-- /*第1个商品信息块样式由.first控制*/ -->
+                            <a href="#">
+                                <img src="images/content/13 hotparts-channel/1.png" alt="">
+                            </a>
+                        </li>
+                        <li class='fl new'> <!-- /*第2个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/13 hotparts-channel/2.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*第3个商品信息块 */ -->
+                            <a href="#">
+                                <img src="images/content/13 hotparts-channel/3.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl no-m very'> <!-- /*第4个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/13 hotparts-channel/4.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl new'> <!-- /*第5个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/13 hotparts-channel/5.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl very'> <!-- /*第6个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/13 hotparts-channel/6.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*第7个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/13 hotparts-channel/7.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="more-goods-channel m-w special special1"> <!-- /* .more-goods-channel（更多商品3）块：.m-w控制宽度和自动控制；.special控制展示块通用样式；.special1控制.more-goods-channel块的特殊样式*/ -->
+                <div class="goods-title clearfix"> <!-- /*.clearfix恢复高度*/ -->
+                    <h2 class='fl'>更多商品</h2>
+                </div>
+                <div class="goods-con"> <!-- /*定义商品信息列表. goods-con */  -->
+                    <ul class='clearfix'>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/14 more-goods-3/1.jpg" alt="">
+                                <p class='pro-name'>荣耀手环4</p>
+                                <p class='pro-desc'>爆款新品放量购</p>
+                                <p class='pro-price'>￥199</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/14 more-goods-3/2.jpg" alt="">
+                                <p class='pro-name'>荣耀手环4</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥299</p>
+                            </a>
+                        </li>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/14 more-goods-3/3.jpg" alt="">
+                                <p class='pro-name'>荣耀电子秤</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥99</p>
+                            </a>
+                        </li>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/14 more-goods-3/4.jpg" alt="">
+                                <p class='pro-name'>耳机</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥159</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/14 more-goods-3/5.jpg" alt="">
+                                <p class='pro-name'>华为Matebook</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥3199</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/14 more-goods-3/6.jpg" alt="">
+                                <p class='pro-name'>荣耀电子秤</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥119</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="left-btn"> <!-- /*定义展示块左端按钮*/ -->
+                        <a href=""><i></i></a>
+                    </div>
+                    <div class="right-btn"> <!-- /*定义展示块右端按钮*/ -->
+                        <a href=""><i></i></a>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="brandparts-channel m-w special special2 special3"><!-- .brandparts-channel（品牌配件）块 -->
+                <div class="goods-title clearfix"> <!-- /*定义展示块标题.goods-title，包括3部分且同行排列：智能家居+横向导航条+更多 */ -->
+                    <h2 class='fl'>品牌配件</h2>
+                    <ul class='fl'>
+                        <li class='fl'><a href="#">移动电源</a></li>
+                        <li class='fl'><a href="#">耳机</a></li>
+                        <li class='fl'><a href="#">充电器/线材</a></li>
+                        <li class='fl'><a href="#">自拍杆/支架</a></li>
+                        <li class='fl'><a href="#">音箱</a></li>
+                        <li class='fl'><a href="#">取卡针</a></li>
+                        <li class='fl'><a href="#">U盘/存储器</a></li>
+                        <li class='fl'><a href="#">摄像头/镜头</a></li>
+                        <li class='fl'><a href="#">智能硬件</a></li>
+                        <li class='fl'><a href="#">生活周边</a></li>
+                    </ul>
+                    <div class="g-more fr">
+                        <a href="#">更多></a>
+                    </div>
+                </div>
+                <div class="goods-con"> <!-- /*定义商品信息块. goods-con */ -->
+                    <ul class='clearfix'> <!-- /*定义商品信息列表，所有商品信息.fl左浮动，占满一行自动换行*/ -->
+                        <li class='fl first'> <!-- /*第1个商品信息块样式由.first控制*/ -->
+                            <a href="#">
+                                <img src="images/content/15 brandparts-channel/1.png" alt="">
+                            </a>
+                        </li>
+                        <li class='fl new'> <!-- /*第2个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/15 brandparts-channel/2.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*第3个商品信息块 */ -->
+                            <a href="#">
+                                <img src="images/content/15 brandparts-channel/3.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl no-m very'> <!-- /*第4个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/15 brandparts-channel/4.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl new'> <!-- /*第5个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/15 brandparts-channel/5.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl very'> <!-- /*第6个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/15 brandparts-channel/6.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                        <li class='fl'> <!-- /*第7个商品信息块，.new显示“新品”字样 */ -->
+                            <a href="#">
+                                <img src="images/content/15 brandparts-channel/7.jpg" alt="">
+                                <p class='pro-name'>华为手环V6</p>
+                                <p class='pro-desc'>彩屏健康手环</p>
+                                <p class='pro-price'>￥999</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="more-goods-channel m-w special special1"> <!-- /* .more-goods-channel（更多商品4）块：.m-w控制宽度和自动控制；.special控制展示块通用样式；.special1控制.more-goods-channel块的特殊样式*/ -->
+                <div class="goods-title clearfix"> <!-- /*.clearfix恢复高度*/ -->
+                    <h2 class='fl'>更多商品</h2>
+                </div>
+                <div class="goods-con"> <!-- /*定义商品信息列表. goods-con */  -->
+                    <ul class='clearfix'>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/16 more-goods-4/1.png" alt="">
+                                <p class='pro-name'>荣耀手环4</p>
+                                <p class='pro-desc'>爆款新品放量购</p>
+                                <p class='pro-price'>￥199</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/16 more-goods-4/2.jpg" alt="">
+                                <p class='pro-name'>荣耀手环4</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥299</p>
+                            </a>
+                        </li>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/16 more-goods-4/3.jpg" alt="">
+                                <p class='pro-name'>荣耀电子秤</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥99</p>
+                            </a>
+                        </li>
+                        <li class='fl very'>
+                            <a href="#">
+                                <img src="images/content/16 more-goods-4/3.png" alt="">
+                                <p class='pro-name'>耳机</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥159</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/16 more-goods-4/5.jpg" alt="">
+                                <p class='pro-name'>华为Matebook</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥3199</p>
+                            </a>
+                        </li>
+                        <li class='fl new'>
+                            <a href="#">
+                                <img src="images/content/16 more-goods-4/6.jpg" alt="">
+                                <p class='pro-name'>荣耀电子秤</p>
+                                <p class='pro-desc'>每天10:08限量销售</p>
+                                <p class='pro-price'>￥119</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="left-btn"> <!-- /*定义展示块左端按钮*/ -->
+                        <a href=""><i></i></a>
+                    </div>
+                    <div class="right-btn"> <!-- /*定义展示块右端按钮*/ -->
+                        <a href=""><i></i></a>
+                    </div>
+                </div>
+            </div>
 
             <div class="last-one m-w"> <!-- /*.last-one块：.m-w设置宽度和自动居中*/ -->
-                <a href="#"><img src="images/content/16 last-one/01.jpg"></a>
+                <a href="#"><img src="images/content/17 last-one/01.jpg"></a>
             </div>
             
         </div>
@@ -494,13 +1632,10 @@
 
         <!--定义footer部分-->
         <div id="footer">
-            <div class="f-slogan m-w">
-                <!-- .f-slogan块，.m-w控制宽度并自动居中 -->
-                <ul class="clearfix">
-                    <!-- .clearfix清除浮动恢复无序列表的高度 -->
-                    <li class="fl">
-                        <!-- 所有li左浮动，实现同行排列  -->
-                        <a href="#"><i class="first"></i>百强企业 品质保证</a><!-- i标签实现图标插入 -->
+            <div class="f-slogan m-w"> <!-- .f-slogan块，.m-w控制宽度并自动居中 -->
+                <ul class="clearfix"> <!-- .clearfix清除浮动恢复无序列表的高度 -->
+                    <li class="fl"> <!-- 所有li左浮动，实现同行排列  -->
+                        <a href="#"><i class="first"></i>百强企业 品质保证</a> <!-- i标签实现图标插入 -->
                     </li>
                     <li class="fl">
                         <a href="#"><i class="second"></i>7天退货 15天换货</a>
@@ -516,8 +1651,7 @@
 
             <!-- .f-service块：.m-w控制宽度和自动居中；.clearfix恢复块高度 -->
             <div class="f-service m-w clearfix">
-                <dl class='fl'>
-                    <!-- 七个定义列表.fl左浮动实现同行排列 -->
+                <dl class='fl'> <!-- 七个定义列表.fl左浮动实现同行排列 -->
                     <dt>购物相关</dt>
                     <dd><a href="#">购物指南</a></dd>
                     <dd><a href="#">配送方式</a></dd>
@@ -553,8 +1687,7 @@
                     <dd><a href="#">腾讯微博</a></dd>
                     <dd><a href="#">花粉俱乐部</a></dd>
                 </dl>
-                <dl class='fl arrow'>
-                    <!-- .arrow样式用于给“友情链接”列表增加图标 -->
+                <dl class='fl arrow'> <!-- .arrow样式用于给“友情链接”列表增加图标 -->
                     <dt>
                         友情链接
                         <span class="first">&lt;</span>
@@ -566,8 +1699,7 @@
                     <dd><a href="#">花粉俱乐部</a></dd>
                     <dd><a href="#">网站地图</a></dd>
                 </dl>
-                <dl class='fl last-one'>
-                    <!-- .last-one为最后一个列表定义样式 -->
+                <dl class='fl last-one'> <!-- .last-one为最后一个列表定义样式 -->
                     <dt>
                         400-088-6888
                     </dt>
@@ -582,8 +1714,7 @@
 
             <!-- /*. f-container块：m-w控制宽度和自动居中；clearfix恢复高度 */ -->
             <div class="f-container m-w clearfix ">
-                <div class="left fl">
-                    <!-- /*.left块、middle块和.right块都.fl左浮动，实现同行排列*/ -->
+                <div class="left fl"> <!-- /*.left块、middle块和.right块都.fl左浮动，实现同行排列*/ -->
                     <a href="#"><img src="images/footer/flogo.png"></a>
                 </div>
                 <div class="middle fl">
@@ -597,8 +1728,7 @@
                     </p>
                 </div>
                 <div class="right fl">
-                    <ul class="clearfix">
-                        <!-- /*用无序列表组织5个图标，通过.fl左浮动实现同行排列；.clearfix恢复高度*/ -->
+                    <ul class="clearfix"> <!-- /*用无序列表组织5个图标，通过.fl左浮动实现同行排列；.clearfix恢复高度*/ -->
                         <li class="fl">
                             <a href="#"><img src="images/footer/01.jpg"></a>
                         </li>
@@ -617,7 +1747,6 @@
                     </ul>
                 </div>
             </div>
-
         </div>
         <!--定义footer部分-->
 

@@ -13,7 +13,6 @@
     position:absolute;  /*用绝对定位+负外边距的方式实现在父元素中居中*/
     left:50%;
     margin-left:-960px;
-
 }
 .c-banner .c-b-btn{  
     /*设置.c-b-btn样式：用绝对定位+负外边距重新定位到c-banner的水平居中*/
@@ -73,7 +72,7 @@
     bottom:-5px;      /*垂直坐标：下边线在p下边线之下5px */
     width: 7px;       /*设置宽度 */
     height: 13px;      /*设置高度 */
-    background: url('images/content/01 login and icon/icon-common.png') no-repeat -9px -214px;     /*设置背景图片：从指定图片中截取一部分 */
+    background: url('../images/content/01 login and icon/icon-common.png') no-repeat -9px -214px;     /*设置背景图片：从指定图片中截取一部分 */
 }
 
 
@@ -180,21 +179,20 @@
 	margin-top:8px;
 	margin-right:20px;
 }
-.c-nav .c-n-login .c-l-con{ 
- /*设置.c-n-login 小块中右边小块.c-l-con样式:宽度、高度、上外边距、文字颜色*/
+.c-nav .c-n-login .c-l-con{ /*设置.c-n-login 小块中右边小块.c-l-con样式:宽度、高度、上外边距、文字颜色*/
 	width: 160px;
 	height:60px;
 	margin-top:8px;
 	color:#B6B6B6;
 }
-.c-nav .c-n-login .c-l-con p a{/*设置.c-n-login 小块中右边小块.c-l-con中p里的超链接样式:文字颜色、下划线*/
+.c-nav .c-n-login .c-l-con p a{ /*设置.c-n-login 小块中右边小块.c-l-con中p里的超链接样式:文字颜色、下划线*/
 	color:#000;
 	text-decoration:underline;
 }
-.c-nav .c-n-login .c-l-con p a:hover{/*设置.c-n-login 小块中右边小块.c-l-con中p里的悬停状态的超链接样式:文字颜色*/
+.c-nav .c-n-login .c-l-con p a:hover{ /*设置.c-n-login 小块中右边小块.c-l-con中p里的悬停状态的超链接样式:文字颜色*/
 	color:#CA151D;
 }
-.c-nav .c-n-login .c-l-con > a{/*设置小块.c-l-con中直接包含的超链接样式*/
+.c-nav .c-n-login .c-l-con > a{ /*设置小块.c-l-con中直接包含的超链接样式*/
 	display: inline-block;   /*行内块*/
 	width: 58px;          /*设置宽度*/
 	height: 18px;          /*设置高度*/
@@ -205,8 +203,7 @@
 	line-height:18px;           /*设置行高*/
 	text-align:center;           /*设置水平居中对齐*/
 }
-.c-nav .c-n-login .c-l-con > a:hover{  
-/*设置小块.c-l-con中直接包含的悬停状态的超链接样式：背景色、文字颜色*/
+.c-nav .c-n-login .c-l-con > a:hover{ /*设置小块.c-l-con中直接包含的悬停状态的超链接样式：背景色、文字颜色*/
 	background-color: #CA151D;
 	color:#fff;
 }
@@ -227,7 +224,7 @@
 	width:40px;
 	height:40px;
 	margin:auto;
-	background:url("images/content/01 login and icon/01.png")
+	background: url('../images/content/01 login and icon/01.png');
 }
 .c-nav .c-select li i.second{ /*设置小块.c-select中li包含的.second类的i标签样式*/
 	background-position:-40px 0;
@@ -248,27 +245,25 @@
 	width:303px;
 	border-left:1px solid #eee;
 }
+
 .c-nav .c-notice a{ /*设置小块.c-notice中.c-n-txt类的p中的超链接样式*/
 	color:#000;
 }
-.c-nav .c-notice a:hover{ 
-/*设置小块.c-notice中.c-n-txt类的p中的悬停状态的超链接样式*/
+.c-nav .c-notice a:hover{ /*设置小块.c-notice中.c-n-txt类的p中的悬停状态的超链接样式*/
 	color:#CA151D;
 }
-.c-nav .c-notice p.c-n-txt{ 
-/*设置小块.c-notice中.c-n-txt类的p样式:高度、行高、下边框和字体大小*/
+.c-nav .c-notice p.c-n-txt{ /*设置小块.c-notice中.c-n-txt类的p样式:高度、行高、下边框和字体大小*/
 	height:49px;
 	line-height:49px;
 	border-bottom:1px solid #eee;
 	font-size:14px;	
 }
-.c-nav .c-notice p.c-n-txt i{ 
-/*设置小块.c-notice中.c-n-txt类的p中的实现图标显示的i标签样式*/
+.c-nav .c-notice p.c-n-txt i{ /*设置小块.c-notice中.c-n-txt类的p中的实现图标显示的i标签样式*/
 	display: inline-block;  /*行内块*/
 	width: 31px;         /*设置宽度*/
 	height: 13px;         /*设置高度*/
 	margin:0 12px;       /*设置外边距*/
-	background:url('images/content/01 login and icon/icon-common.png') no-repeat -17px -214px;  /*设置背景图片*/
+	background:url('../images/content/01 login and icon/icon-common.png') no-repeat -17px -214px;  /*设置背景图片*/
 	vertical-align:middle; /*设置垂直居中对齐*/
 }
 .c-nav .c-notice p.c-n-info{  /*设置小块.c-notice中.c-n-info类的p的样式:高度、行高*/
@@ -284,8 +279,7 @@
 	display:inline-block;    /*行内块*/
 	width:20px;           /*宽度*/
 	height:20px;           /*高度*/
-	background:url('images/content/01 login and icon/kind-1.png') no-repeat -242px 0px;
- /*背景图片*/
+	background:url('../images/content/01 login and icon/kind-1.png') no-repeat -242px 0px; /*背景图片*/
 	vertical-align:middle;  /*垂直居中对齐*/
 }
 .c-nav .c-notice .c-n-info a span.second{
@@ -369,21 +363,42 @@
 	height: 148px;
 	margin-top:28px;
 }
-.special .goods-con li.new:after{
+.special .goods-con li.hot:after{/*.hot样式用于在图片上显示“热卖”字样*/
 	position: absolute;
 	content:'';
 	width: 48px;
 	height: 48px;
-	background:url('images/content/01 login and icon/1497576023361.png') no-repeat 0px 0px;
+	background:url('../images/content/hot.png');
 }
-.hots-goods .goods-con li.new:after{
+.special .goods-con li.hot:after{
+	right: 35px;
+    top: 135px;
+}
+.special .goods-con li.new:after{/*.new样式用于在图片上显示“新品”字样*/
+	position: absolute;
+	content:'';
+	width: 48px;
+	height: 48px;
+	background:url('../images/content/01 login and icon/1497576023361.png') no-repeat 0px 0px;
+}
+.special .goods-con li.new:after{
+	right: 35px;
+    top: 135px;
+}
+.special .goods-con li.very:after{/*.very样式用于在图片上显示“爆款”字样*/
+	position: absolute;
+	content:'';
+	width: 48px;
+	height: 48px;
+	background:url('../images/content/very.png') no-repeat 0px 0px;
+}
+.special .goods-con li.very:after{
 	right: 35px;
     top: 135px;
 }
 
 
-.special1 .goods-con{
-    /*设置商品信息块.goods-con样式：相对定位，水平方向超出部分截断*/
+.special1 .goods-con{ /*设置商品信息块.goods-con样式：相对定位，水平方向超出部分截断*/
     position: relative;
     overflow-x:hidden;
 }
@@ -404,8 +419,7 @@
     width: 134px;
     height: 134px;
 }
-.special1 .goods-con > div{ 
-    /*设置商品信息块.goods-con中的div(此处即为展示块中左右两端的按钮)样式*/
+.special1 .goods-con > div{ /*设置商品信息块.goods-con中的div(此处即为展示块中左右两端的按钮)样式*/
     position: absolute;  /*通过绝对定位+负垂直方向外边距的方法实现垂直居中，水平方向与父元素.goods-con左对齐*/
     top:50%;
     left:0;
@@ -429,16 +443,14 @@
     height: 16px;
     margin:0 auto;
     margin-top:27.5px;
-    background:url('images/content/01 login and icon/icon-common.png') no-repeat -101px -1px;
-}
-    
+    background:url('../images/content/01 login and icon/icon-common.png') no-repeat -101px -1px;
+}   
 .special1 .goods-con > div.right-btn{ 
     /*设置商品信息块.goods-con中的.right-btn类div(此处即为展示块中左右两端的按钮)样式：水平坐标 */
-    right:0px;
+    left: 1178px;
 }
-.special1 .goods-con > div.right-btn i{ 
-    /*设置商品信息块.goods-con中的.right-btn类div(此处即为展示块中左右两端的按钮)中i标签样式：背景图片位置*/
-    background-position: -112px -1px;
+.special1 .goods-con > div.right-btn i{ /*设置商品信息块.goods-con中的.right-btn类div(此处即为展示块中左右两端的按钮)中i标签样式：背景图片位置*/
+	background-position: -112px -1px;
 }
   
 
@@ -462,7 +474,51 @@
 .special2 .goods-con .no-m{  /*.no-m 样式：左外边距为0*/
     margin-left:0;
 }
- 
+.special2 .goods-con li.new:after{/*.special2 .new样式用于在图片上显示“新品”字样*/
+	position: absolute;
+	content:'';
+	width: 48px;
+	height: 48px;
+	background:url('../images/content/01 login and icon/1497576023361.png') no-repeat 0px 0px;
+}
+.special2 .goods-con li.new:after{
+	right: 50px;
+    top: 185px;
+} 
+.special2 .goods-con li.hot:after{/*.special2 .hot样式用于在图片上显示“热卖”字样*/
+	position: absolute;
+	content:'';
+	width: 48px;
+	height: 48px;
+	background:url('../images/content/hot.png');
+}
+.special2 .goods-con li.hot:after{
+	right: 50px;
+    top: 185px;
+}
+.special2 .goods-con li.very:after{/*.special2 .very样式用于在图片上显示“爆款”字样*/
+	position: absolute;
+	content:'';
+	width: 48px;
+	height: 48px;
+	background:url('../images/content/very.png') no-repeat 0px 0px;
+}
+.special2 .goods-con li.free:after{
+	right: 50px;
+    top: 185px;
+}
+.special2 .goods-con li.free:after{/*.special2 .free样式用于在图片上显示“爆款”字样*/
+	position: absolute;
+	content:'';
+	width: 48px;
+	height: 48px;
+	background:url('../images/content/free.png') no-repeat 0px 0px;
+}
+.special2 .goods-con li.very:after{
+	right: 50px;
+    top: 185px;
+}
+
 
 .special .goods-title a{
 	margin-right:20px;
@@ -511,7 +567,7 @@
 	border-radius:50%;
 	background-color:rgba(204,204,204,0.9);
 }
-.c-banner2.c-b2-btn li.first{  /*手工轮播控制块.c-b2-btn中.first类的li样式：背景色*/
+.c-banner2 .c-b2-btn li.first{  /*手工轮播控制块.c-b2-btn中.first类的li样式：背景色*/
 	background-color:rgba(255,0,0,0.2);
 }
 

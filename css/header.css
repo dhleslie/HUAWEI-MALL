@@ -31,19 +31,20 @@
 #header .h-nav ul > li > a{
 	line-height:30px;  /*设置菜单项中超链接的行高*/
 }
-#header .h-nav ul > li+li::before{/*给导航条中从第二个菜单项开始的其余菜单项，在每个菜单项之前插入内容： 一个宽度为1px、高度为10px，背景色为#666的线（其作用是作为菜单项之间的分隔线）*/
+#header .h-nav ul > li + li::before{/*给导航条中从第二个菜单项开始的其余菜单项，在每个菜单项之前插入内容： 一个宽度为1px、高度为10px，背景色为#999的线（其作用是作为菜单项之间的分隔线）*/
+	display: block;
 	position:absolute;  /*该插入内容相对于菜单项进行绝对定位*/
 	top:10px;
 	left:0px;
 	content:'';
 	width: 1px;
 	height: 10px;
-	background-color: #999;
+	background-color: #ccc;
 }
 #header .h-nav .h-n-r li.no-bor{  /*设置左内边距为3px*/
 	padding-left:3px;
 }
-#header .h-nav .h-n-r li.no-bor:before{   /*设置“请登录”和“注册”这两个菜单项之间的分隔线为隐藏*/
+#header .h-nav .h-n-r li.no-bor::before{   /*设置“请登录”和“注册”这两个菜单项之间的分隔线为隐藏*/
 	display: none;
 }
 
@@ -55,16 +56,19 @@
 	background-color: #fff;
 	box-shadow:0px 5px 0 0 #fff,2px 0 5px 0 #ccc,-2px 0 5px 0 #ccc;
 }
-/*设置.more菜单项鼠标悬停时在菜单项前插入的分隔线位置向左偏移1px，这样就使得该分隔线被其他菜单项所覆盖*/
+/*设置.more菜单项鼠标悬停时在菜单项前插入的分隔线为隐藏*/
 #header .h-nav ul > li.more:hover::before{
-	left:-1px;
+	display: none;
 }
 /*利用::after伪元素给.more菜单项的后面插入一个倒三角形，具体参考上文4.8.4*/
 #header .h-nav ul > li.more::after{
+	display: block;
 	position: absolute;
-	top:11px;
+	top:10px;
 	right:5px;
 	content:'';
+	width: 0px;
+	height: 0px;
 	border:4px solid transparent;
 	border-top:6px solid #999;
 }
@@ -74,16 +78,24 @@
 }
 #header .h-nav .h-n-l .more-con{ /*设置下拉菜单样式 */
 	display:none;  /*正常状态隐藏下拉菜单*/
-position: absolute;   /*设置绝对定位*/  
-	top:30px;          /*设置垂直方向坐标：参照对象以“更多精彩”菜单项为最方便，因为该菜单项的定位方式必须为已经定位的*/
+    position: absolute;   /*设置绝对定位*/  
+	top:30px;      /*设置垂直方向坐标：参照对象以“更多精彩”菜单项为最方便，因为该菜单项的定位方式必须为已经定位的*/
 	right:0;       /*设置水平方向坐标：与“更多精彩”菜单项右对齐*/
 	z-index:-1;    /*当该下拉菜单显示的时候，会与h-nav重叠，重叠时该下拉菜单在.h-nav块的后面，因为.more-con的z-index值小于h-nav块的z-index值1。所以也需要设置.h-nav块的z-index值*/	
-	width: 145px;  /*设置宽度*/
+	width: 120px;  /*设置宽度*/
 	padding:10px;  /*设置内边距*/
-	background-color: #fff;  /*设置背景颜色白色，与“更多精彩”菜单项的背景色一致，视觉上会产生整体的效果/
+	background-color: #fff;  /*设置背景颜色白色，与“更多精彩”菜单项的背景色一致，视觉上会产生整体的效果*/
 	text-align: center;   /*设置水平对齐为居中*/
 	line-height:32px;   /*设置行高*/
 	box-shadow:0px 0px 5px 1px #ccc;   /*设置边框阴影*/
+	border-bottom-right-radius: 8px;/*设置圆角边框*/
+	border-bottom-left-radius: 8px;/*设置圆角边框*/
+}
+#header .h-nav .h-n-l .more-con a{
+	color: #000;
+}
+#header .h-nav .h-n-l .more-con a:hover{
+	color: #CA151D;
 }
 /*修改.h-nav的样式：增加z-index值的设置，同时需要设置position为relative或者absolute，这个z-index属性值才能生效*/
 #header .h-nav{
@@ -98,7 +110,7 @@ position: absolute;   /*设置绝对定位*/
 
 
 #header .h-nav .h-n-r li.car{  /*定义.car样式：白色背景，右内边距为20px*/
-	padding-right:20px;
+	padding-right:12px;
 }
 #header .h-nav .h-n-r li.car:hover{ /*.car鼠标悬停时样式：增加边框阴影*/
     background-color:#fff;
@@ -111,11 +123,11 @@ position: absolute;   /*设置绝对定位*/
 	position: relative;
 	padding-left: 28px;
 }
-.h-nav li.car a::after{/*为购物车超链接之前添加一个购物车图标*/
+.h-nav li.car a::before{/*为购物车超链接之前添加一个购物车图标*/
 	content: "";
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 5px;
 	width: 15px;
 	height: 15px;
 	background: url(../images/header/icon-header.png) no-repeat 0px 0px;
@@ -132,6 +144,13 @@ position: absolute;   /*设置绝对定位*/
 	background-color: #fff;
 	text-align: center;
 	box-shadow:0px 0px 5px 1px #ccc;
+	border-bottom-right-radius: 8px;/*设置圆角边框*/
+	border-bottom-left-radius: 8px;/*设置圆角边框*/
+}
+.h-nav .car-con p{
+	font-size: 14px;
+	color: #999;
+	margin-top: 10px;
 }
 .h-nav .h-n-r li.car:hover .car-con{
 	display: block;
@@ -170,8 +189,8 @@ position: absolute;   /*设置绝对定位*/
 }
 .h-content .search .search-bar{   /*设置搜索表单中文本框.search-bar的样式*/
 	position: absolute;
-width: 300px;     /*设置宽度*/
-height: 30px;
+	width: 300px;     /*设置宽度*/
+	height: 30px;
 	border:0;         /*设置无边框*/
 	outline:none;      /*设置无轮廓*/
 }
@@ -186,7 +205,7 @@ height: 30px;
 	height: 20px;           /*设置高度*/
 	border:0;              /*无边框*/
 	outline:none;           /*无轮廓*/
-	background:url('images/header/icon-header.png') no-repeat 0px -25px; 
+	background:url(../images/header/icon-header.png) no-repeat 0px -25px; 
      /*设置背景图片：从指定图片中获取相应部分作为背景*/
 }
 .h-content .search p{  /*设置搜索表单中的段落样式：用绝对定位控制段落位置*/
